@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
         {/* Google AdSense Global Script */}
         <Script
           async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=pub-6470302408006463`}
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6470302408006463"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
