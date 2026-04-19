@@ -78,7 +78,7 @@ export default function QRCodeGenerator() {
 
       <main className="max-w-4xl mx-auto px-6 pt-12">
        
-  // ... the rest of your existing state variables (password, length, etc.)
+  // the rest of your existing state variables (password, length, etc.)
         <h1 className="text-3xl font-bold mb-8">Free QR Code Generator</h1>
 
         {/* AdSense Top Slot */}
