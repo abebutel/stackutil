@@ -50,15 +50,16 @@ export default function Home() {
 
       {/* Hero Section with Gradient Mesh */}
       <header className="relative px-8 py-20 overflow-hidden text-center">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 blur-3xl opacity-30 -z-10 rounded-full"></div>
-        <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-6">
-          Free Everyday Web Tools.<br/>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">No Signups. No Hassle.</span>
-        </h1>
-        <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
-          Instantly generate passwords, convert currencies, and format data right in your browser. Fast, secure, and built for modern workflows.
-        </p>
-      </header>
+  {/* Keep the gradient mesh background */}
+  <div className="absolute top-0 left-1/2 w-full max-w-3xl h-full bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 blur-3xl opacity-30 -z-10 rounded-full"></div>
+
+  {/* This is the streamlined, gradient centerpiece headline */}
+  <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
+    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+      Free Everyday Web Tools.
+    </span>
+  </h1>
+</header>
 
       {/* Tool Grid & Ad Integration */}
       <main className="max-w-6xl mx-auto px-8 pb-24">
