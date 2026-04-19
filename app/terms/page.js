@@ -1,4 +1,15 @@
-<h1>Terms and Conditions</h1>
+import Link from 'next/link';
+
+export default function TermsOfService() {
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans p-8 md:p-24">
+      <div className="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-slate-200">
+        <Link href="/" className="text-blue-600 hover:underline mb-8 inline-block">← Back to Home</Link>
+        
+        <div className="prose prose-slate">
+          {/* PASTE YOUR TERMSFEED CONTENT BELOW THIS LINE */}
+ 
+          <h1>Terms and Conditions</h1>
 <p>Last updated: April 19, 2026</p>
 <p>Please read these terms and conditions carefully before using Our Service.</p>
 <h2>Interpretation and Definitions</h2>
@@ -88,3 +99,9 @@ You agree that the original English text shall prevail in the case of a dispute.
 <p>By visiting this page on our website: <a href="http://stackutil.com/terms" rel="external nofollow noopener" target="_blank">http://stackutil.com/terms</a></p>
 </li>
 </ul>
+          
+        </div>
+      </div>
+    </div>
+  );
+}

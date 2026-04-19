@@ -187,11 +187,7 @@ export default function CurrencyConverter() {
 
           <div className="mt-8 text-center text-sm text-slate-400">
             {rates ? `Market rates last updated: ${lastUpdated} UTC` : 'Fetching live exchange rates...'}
-          </div>
-        </div>
-
-        // 2. Add this link below your conversion display (inside the main card)
-<div className="mt-8 text-center">
+            <div className="mt-8 text-center">
   <p className="text-sm text-slate-400 mb-2">
     {rates ? `Market rates last updated: ${lastUpdated} UTC` : 'Fetching live exchange rates...'}
   </p>
@@ -199,7 +195,10 @@ export default function CurrencyConverter() {
     Need another currency? Request it here.
   </Link>
 </div>
+          </div>
+        </div>
 
+        
         {/* SEO Article */}
         <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
           <h2 className="text-2xl font-bold mb-4 text-slate-800">Understanding Exchange Rates</h2>
