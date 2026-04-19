@@ -14,6 +14,7 @@ const CURRENCIES = {
   CAD: { name: 'Canadian Dollar', flag: '🇨🇦' },
   AUD: { name: 'Australian Dollar', flag: '🇦🇺' },
   CHF: { name: 'Swiss Franc', flag: '🇨🇭' },
+  THB: { name: 'Thai Baht', flag: '🇹🇭' },
 };
 
 export default function CurrencyConverter() {
@@ -188,6 +189,16 @@ export default function CurrencyConverter() {
             {rates ? `Market rates last updated: ${lastUpdated} UTC` : 'Fetching live exchange rates...'}
           </div>
         </div>
+
+        // 2. Add this link below your conversion display (inside the main card)
+<div className="mt-8 text-center">
+  <p className="text-sm text-slate-400 mb-2">
+    {rates ? `Market rates last updated: ${lastUpdated} UTC` : 'Fetching live exchange rates...'}
+  </p>
+  <Link href="/contact" className="text-xs text-blue-500 hover:underline">
+    Need another currency? Request it here.
+  </Link>
+</div>
 
         {/* SEO Article */}
         <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
