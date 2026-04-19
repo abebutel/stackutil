@@ -4,7 +4,17 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function PasswordGenerator() {
-  const [password, setPassword] = useState('');
+    // 1. ADD THIS RIGHT AT THE VERY TOP
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const tools = [
+    { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },
+    { title: "QR Code Generator", icon: "📱", link: "/qr-generator" },
+    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" },
+    { title: "Currency Converter", icon: "💱", link: "/currency-converter" }
+  ];
+
+  // 2. Your existing state variables stay right below it
+   const [password, setPassword] = useState('');
   const [length, setLength] = useState(14);
   const [includeUpper, setIncludeUpper] = useState(true);
   const [includeLower, setIncludeLower] = useState(true);
@@ -110,19 +120,7 @@ export default function PasswordGenerator() {
       </nav>
 
       <main className="max-w-3xl mx-auto px-6 pt-12">
-        export default function PasswordGenerator() { // (or QRCodeGenerator / TimeConverter)
-  
-  // 1. Add the mobile menu toggle state
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // 2. Add the tools array so the menu can render the links
-  const tools = [
-    { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },
-    { title: "QR Code Generator", icon: "📱", link: "/qr-generator" },
-    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" },
-    { title: "Currency Converter", icon: "💱", link: "/currency-converter" }
-  ];
-
+        
   // ... the rest of your existing state variables (password, length, etc.)
         <h1 className="text-3xl font-bold mb-8">Strong Password Generator</h1>
 

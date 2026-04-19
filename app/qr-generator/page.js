@@ -5,7 +5,18 @@ import Link from 'next/link';
 import { QRCodeCanvas } from 'qrcode.react';
 
 export default function QRCodeGenerator() {
-  const [text, setText] = useState('https://stackutil.com');
+  export default function QRCodeGenerator() {
+  // 1. ADD THIS RIGHT AT THE VERY TOP
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const tools = [
+    { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },
+    { title: "QR Code Generator", icon: "📱", link: "/qr-generator" },
+    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" },
+    { title: "Currency Converter", icon: "💱", link: "/currency-converter" }
+  ];
+
+  // 2. Your existing state variables stay right below it
+    const [text, setText] = useState('https://stackutil.com');
   const [fgColor, setFgColor] = useState('#0f172a'); // Slate 900
   const [bgColor, setBgColor] = useState('#ffffff');
   const qrRef = useRef();
@@ -67,19 +78,7 @@ export default function QRCodeGenerator() {
       </nav>
 
       <main className="max-w-4xl mx-auto px-6 pt-12">
-        export default function PasswordGenerator() { // (or QRCodeGenerator / TimeConverter)
-  
-  // 1. Add the mobile menu toggle state
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // 2. Add the tools array so the menu can render the links
-  const tools = [
-    { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },
-    { title: "QR Code Generator", icon: "📱", link: "/qr-generator" },
-    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" },
-    { title: "Currency Converter", icon: "💱", link: "/currency-converter" }
-  ];
-
+       
   // ... the rest of your existing state variables (password, length, etc.)
         <h1 className="text-3xl font-bold mb-8">Free QR Code Generator</h1>
 
