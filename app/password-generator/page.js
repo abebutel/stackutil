@@ -4,17 +4,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function PasswordGenerator() {
-    // 1. ADD THIS RIGHT AT THE VERY TOP
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const tools = [
-    { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },
+    { title: "Currency Converter", icon: "💱", link: "/currency-converter" },
+    { title: "Strong Password Generator", icon: "💪", link: "/password-generator" },
     { title: "QR Code Generator", icon: "📱", link: "/qr-generator" },
-    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" },
-    { title: "Currency Converter", icon: "💱", link: "/currency-converter" }
+    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" }
   ];
 
-  // 2. Your existing state variables stay right below it
-   const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('');
   const [length, setLength] = useState(14);
   const [includeUpper, setIncludeUpper] = useState(true);
   const [includeLower, setIncludeLower] = useState(true);
@@ -40,7 +38,6 @@ export default function PasswordGenerator() {
 
     if (charset === '') return setPassword('');
 
-    // Guarantee minimums
     let guaranteedChars = '';
     if (includeNumbers) {
       for (let i = 0; i < minNumbers; i++) {
@@ -59,7 +56,6 @@ export default function PasswordGenerator() {
       newPassword += charset[Math.floor(Math.random() * charset.length)];
     }
 
-    // Combine and shuffle
     const finalPassword = (guaranteedChars + newPassword).split('').sort(() => 0.5 - Math.random()).join('').slice(0, length);
     setPassword(finalPassword);
     setCopied(false);
@@ -77,19 +73,13 @@ export default function PasswordGenerator() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-24">
-      {/* Simple Header */}
-      {/* Updated Navigation with Collapsible Menu */}
       <nav className="px-8 py-4 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           <Link href="/" className="text-2xl font-black tracking-tight text-slate-800">
             Stack<span className="text-blue-600">Util</span>
           </Link>
           
-          {/* Mobile Menu Toggle Button */}
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 text-slate-600 hover:text-blue-600 focus:outline-none"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-slate-600 hover:text-blue-600 focus:outline-none">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -100,17 +90,11 @@ export default function PasswordGenerator() {
           </button>
         </div>
 
-        {/* Collapsible Mobile Menu */}
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4 md:hidden">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Available Tools</span>
             {tools.map((tool, idx) => (
-              <Link 
-                key={idx} 
-                href={tool.link} 
-                onClick={() => setIsMenuOpen(false)}
-                className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium"
-              >
+              <Link key={idx} href={tool.link} onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium">
                 <span>{tool.icon}</span>
                 <span>{tool.title}</span>
               </Link>
@@ -120,39 +104,34 @@ export default function PasswordGenerator() {
       </nav>
 
       <main className="max-w-3xl mx-auto px-6 pt-12">
-        
-  // ... the rest of your existing state variables (password, length, etc.)
-        <h1 className="text-3xl font-bold mb-8">Strong Password Generator</h1>
+        <h1 className="text-3xl font-bold mb-8">💪 Password Generator</h1>
 
-        {/* AdSense Top Slot */}
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">
           [AdSense Banner]
         </div>
 
-        {/* Tool UI Card */}
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-12">
-          {/* Output Display */}
           <div className="relative flex items-center bg-slate-100 rounded-xl p-4 mb-8 border border-slate-200">
-            <input 
-              type="text" 
-              value={password} 
-              readOnly 
-              className="bg-transparent w-full text-2xl font-mono tracking-wider text-slate-800 focus:outline-none"
-            />
-            <button onClick={generatePassword} className="p-2 hover:bg-slate-200 rounded-lg transition-colors mr-2 text-xl" title="Regenerate">
-              🔄
-            </button>
+            <input type="text" value={password} readOnly className="bg-transparent w-full text-2xl font-mono tracking-wider text-slate-800 focus:outline-none" />
+            <button onClick={generatePassword} className="p-2 hover:bg-slate-200 rounded-lg transition-colors mr-2 text-xl" title="Regenerate">🔄</button>
             <button onClick={copyToClipboard} className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
               {copied ? 'Copied!' : 'Copy'}
             </button>
           </div>
 
-          {/* Controls */}
           <div className="space-y-6">
             <div>
-              <div className="flex justify-between mb-2">
-                <label className="font-semibold">Password Length</label>
-                <span className="text-blue-600 font-bold">{length}</span>
+              <div className="flex justify-between items-center mb-4">
+                <label className="font-semibold text-slate-700">Password Length</label>
+                {/* NEW: Input field linked to the slider */}
+                <input 
+                  type="number" 
+                  min="5" 
+                  max="128" 
+                  value={length} 
+                  onChange={(e) => setLength(Number(e.target.value))}
+                  className="w-20 p-2 text-center font-bold text-blue-600 bg-blue-50 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
               </div>
               <input 
                 type="range" 
@@ -160,55 +139,47 @@ export default function PasswordGenerator() {
                 max="128" 
                 value={length} 
                 onChange={(e) => setLength(Number(e.target.value))}
-                className="w-full accent-blue-600"
+                className="w-full accent-blue-600 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer"
               />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <label className="flex items-center space-x-3 cursor-pointer">
+              <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeUpper} onChange={() => setIncludeUpper(!includeUpper)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span>Uppercase (A-Z)</span>
+                <span className="text-sm font-medium">Uppercase (A-Z)</span>
               </label>
-              <label className="flex items-center space-x-3 cursor-pointer">
+              <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeLower} onChange={() => setIncludeLower(!includeLower)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span>Lowercase (a-z)</span>
+                <span className="text-sm font-medium">Lowercase (a-z)</span>
               </label>
-              <label className="flex items-center space-x-3 cursor-pointer">
+              <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeNumbers} onChange={() => setIncludeNumbers(!includeNumbers)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span>Numbers (0-9)</span>
+                <span className="text-sm font-medium">Numbers (0-9)</span>
               </label>
-              <label className="flex items-center space-x-3 cursor-pointer">
+              <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeSymbols} onChange={() => setIncludeSymbols(!includeSymbols)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span>Symbols (!@#$%)</span>
+                <span className="text-sm font-medium">Symbols (!@#$%)</span>
               </label>
             </div>
 
             <div className="grid grid-cols-2 gap-6 pt-4 border-t border-slate-100">
               <div>
-                <label className="block text-sm text-slate-500 mb-1">Minimum Numbers</label>
-                <input type="number" min="0" value={minNumbers} onChange={(e) => setMinNumbers(Number(e.target.value))} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
+                <label className="block text-sm font-semibold text-slate-500 mb-1">Min Numbers</label>
+                <input type="number" min="0" value={minNumbers} onChange={(e) => setMinNumbers(Number(e.target.value))} className="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
               </div>
               <div>
-                <label className="block text-sm text-slate-500 mb-1">Minimum Symbols</label>
-                <input type="number" min="0" value={minSymbols} onChange={(e) => setMinSymbols(Number(e.target.value))} className="w-full p-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500" />
+                <label className="block text-sm font-semibold text-slate-500 mb-1">Min Symbols</label>
+                <input type="number" min="0" value={minSymbols} onChange={(e) => setMinSymbols(Number(e.target.value))} className="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* SEO Article */}
-        <article className="prose prose-slate max-w-none">
+        <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl border border-slate-100">
           <h2 className="text-2xl font-bold mb-4">The Importance of Strong Passwords</h2>
-          <p className="mb-4 text-slate-600 leading-relaxed">
-            In an era where automated brute-force attacks can test billions of password combinations per second, a simple phrase or personal date is no longer enough to protect your accounts. A strong password acts as the frontline defense for your financial data, business emails, and personal privacy.
-          </p>
+          <p className="mb-4 text-slate-600 leading-relaxed">In an era where automated brute-force attacks can test billions of combinations per second, a simple phrase is no longer enough. A strong password acts as the frontline defense for your privacy.</p>
           <h3 className="text-xl font-bold mb-3 mt-8">What Makes a Password Truly Secure?</h3>
-          <p className="mb-4 text-slate-600 leading-relaxed">
-            A secure password isn't just about complexity; it's about length and unpredictability. Cybersecurity experts recommend passwords that are at least 14 characters long and include a random mix of uppercase letters, lowercase letters, numbers, and symbols. 
-          </p>
-          <p className="text-slate-600 leading-relaxed">
-            Avoid using dictionary words, sequential numbers (like 1234), or easily guessable information. By using a random generator, you eliminate human bias, creating a cryptographic string that would take modern computers centuries to crack. Remember to pair your strong, unique passwords with a reputable password manager and Two-Factor Authentication (2FA) for maximum security.
-          </p>
+          <p className="mb-4 text-slate-600 leading-relaxed">Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack.</p>
         </article>
       </main>
     </div>
