@@ -6,7 +6,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "StackUtil | Free Everyday Web Tools",
-  description: "convert currencies, generate qr codes and more - FREE.",
+  description: "Instantly generate passwords, convert currencies, and format data right in your browser. Fast, secure, and built for modern workflows.",
+  metadataBase: new URL('https://stackutil.com'),
+  openGraph: {
+    title: 'StackUtil | Free Everyday Web Tools',
+    description: 'Instantly generate passwords, convert currencies, and format data right in your browser.',
+    url: 'https://stackutil.com',
+    siteName: 'StackUtil',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({ children }) {
