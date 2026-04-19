@@ -10,7 +10,7 @@ export const metadata = {
   metadataBase: new URL('https://stackutil.com'),
   openGraph: {
     title: 'StackUtil | Free Everyday Web Tools',
-    description: 'Instantly generate passwords, convert currencies, and format data right in your browser.',
+    description: 'convert currencies, generate qr codes & more - FREE',
     url: 'https://stackutil.com',
     siteName: 'StackUtil',
     locale: 'en_US',
