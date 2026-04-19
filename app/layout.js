@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "StackUtil | Free Everyday Web Tools",
-  description: "Instantly generate passwords, convert currencies, and format data right in your browser.",
+  description: "convert currencies, generate qr codes and more - FREE.",
 };
 
 export default function RootLayout({ children }) {
