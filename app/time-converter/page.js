@@ -81,10 +81,45 @@ export default function TimeConverter() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-24">
       {/* Navigation */}
-      <nav className="px-8 py-4 bg-white/70 backdrop-blur-md border-b border-slate-200">
-        <Link href="/" className="text-xl font-black tracking-tight text-slate-800 hover:opacity-80">
-          Stack<span className="text-blue-600">Util</span>
-        </Link>
+      {/* Updated Navigation with Collapsible Menu */}
+      <nav className="px-8 py-4 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div className="flex items-center justify-between max-w-6xl mx-auto">
+          <Link href="/" className="text-2xl font-black tracking-tight text-slate-800">
+            Stack<span className="text-blue-600">Util</span>
+          </Link>
+          
+          {/* Mobile Menu Toggle Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 text-slate-600 hover:text-blue-600 focus:outline-none"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        {/* Collapsible Mobile Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4 md:hidden">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Available Tools</span>
+            {tools.map((tool, idx) => (
+              <Link 
+                key={idx} 
+                href={tool.link} 
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium"
+              >
+                <span>{tool.icon}</span>
+                <span>{tool.title}</span>
+              </Link>
+            ))}
+          </div>
+        )}
       </nav>
 
       <main className="max-w-5xl mx-auto px-6 pt-12">

@@ -1,6 +1,9 @@
+'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const tools = [
     {
       title: "Strong Password Generator",
@@ -35,31 +38,71 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       {/* Navigation */}
-      <nav className="flex items-center justify-between px-8 py-4 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
-        <div className="text-2xl font-black tracking-tight text-slate-800">
-          Stack<span className="text-blue-600">Util</span>
+      {/* Updated Navigation with Collapsible Menu */}
+      <nav className="px-8 py-4 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
+        <div className="flex items-center justify-between max-w-6xl mx-auto">
+          <Link href="/" className="text-2xl font-black tracking-tight text-slate-800">
+            Stack<span className="text-blue-600">Util</span>
+          </Link>
+          
+          {/* Mobile Menu Toggle Button */}
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 text-slate-600 hover:text-blue-600 focus:outline-none"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isMenuOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
         </div>
-        <div className="hidden md:flex space-x-4">
-          <input 
-            type="text" 
-            placeholder="Search tools..." 
-            className="px-4 py-2 bg-slate-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
-          />
-        </div>
+
+        {/* Collapsible Mobile Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4 md:hidden">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Available Tools</span>
+            {tools.map((tool, idx) => (
+              <Link 
+                key={idx} 
+                href={tool.link} 
+                onClick={() => setIsMenuOpen(false)}
+                className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium"
+              >
+                <span>{tool.icon}</span>
+                <span>{tool.title}</span>
+              </Link>
+            ))}
+          </div>
+        )}
       </nav>
 
-      {/* Hero Section with Gradient Mesh */}
-      <header className="relative px-8 py-20 overflow-hidden text-center">
-  {/* Keep the gradient mesh background */}
-  <div className="absolute top-0 left-1/2 w-full max-w-3xl h-full bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 blur-3xl opacity-30 -z-10 rounded-full"></div>
+      {/* Streamlined Hero Section with Quick Links */}
+      <header className="relative px-6 py-10 md:py-20 overflow-hidden text-center">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-full bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 blur-3xl opacity-30 -z-10 rounded-full"></div>
+        
+        <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-6">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            Free Everyday Web Tools.
+          </span>
+        </h1>
 
-  {/* This is the streamlined, gradient centerpiece headline */}
-  <h1 className="text-3xl md:text-5xl font-black tracking-tight mb-8">
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-      Free Everyday Web Tools.
-    </span>
-  </h1>
-</header>
+        {/* Quick Link Pills */}
+        <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+          {tools.map((tool, idx) => (
+            <Link 
+              key={idx} 
+              href={tool.link}
+              className="px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200 rounded-full text-sm font-semibold text-slate-700 hover:bg-white hover:shadow-sm hover:border-blue-300 transition-all flex items-center gap-2"
+            >
+              <span>{tool.icon}</span>
+              {tool.title.replace(' Generator', '').replace(' Converter', '')}
+            </Link>
+          ))}
+        </div>
+      </header>
 
       {/* Tool Grid & Ad Integration */}
       <main className="max-w-6xl mx-auto px-8 pb-24">
