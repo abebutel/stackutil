@@ -16,8 +16,7 @@ const CITY_DB = [
 ];
 
 export default function TimeConverter() {
-  export default function TimeConverter() {
-  // 1. ADD THIS RIGHT AT THE VERY TOP
+    // 1. ADD THIS RIGHT AT THE VERY TOP
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const tools = [
     { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },

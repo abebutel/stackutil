@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { QRCodeCanvas } from 'qrcode.react';
 
 export default function QRCodeGenerator() {
-  export default function QRCodeGenerator() {
-  // 1. ADD THIS RIGHT AT THE VERY TOP
+    // 1. ADD THIS RIGHT AT THE VERY TOP
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const tools = [
     { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },
