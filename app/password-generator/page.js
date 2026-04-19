@@ -110,6 +110,20 @@ export default function PasswordGenerator() {
       </nav>
 
       <main className="max-w-3xl mx-auto px-6 pt-12">
+        export default function PasswordGenerator() { // (or QRCodeGenerator / TimeConverter)
+  
+  // 1. Add the mobile menu toggle state
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // 2. Add the tools array so the menu can render the links
+  const tools = [
+    { title: "Strong Password Generator", icon: "🔒", link: "/password-generator" },
+    { title: "QR Code Generator", icon: "📱", link: "/qr-generator" },
+    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" },
+    { title: "Currency Converter", icon: "💱", link: "/currency-converter" }
+  ];
+
+  // ... the rest of your existing state variables (password, length, etc.)
         <h1 className="text-3xl font-bold mb-8">Strong Password Generator</h1>
 
         {/* AdSense Top Slot */}
