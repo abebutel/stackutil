@@ -4,36 +4,37 @@ import Link from 'next/link';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const tools = [
-    {
-      title: "Strong Password Generator",
-      desc: "Create secure, randomized passwords instantly.",
-      icon: "🔒",
-      link: "/password-generator",
-      color: "from-blue-400 to-blue-600"
-    },
-    {
-      title: "QR Code Generator",
-      desc: "Convert URLs and text to custom QR codes.",
-      icon: "📱",
-      link: "/qr-generator",
-      color: "from-green-400 to-emerald-600"
-    },
-    {
-      title: "Date & Time Converter",
-      desc: "Compare global time zones and local sunrise/sunset.",
-      icon: "🌍",
-      link: "/time-converter",
-      color: "from-purple-400 to-indigo-600"
-    },
-    {
-      title: "Currency Converter",
-      desc: "Check live and historical exchange rates.",
-      icon: "💱",
-      link: "/currency-converter",
-      color: "from-orange-400 to-red-500"
-    }
-  ];
+  // 1. Updated Tools Array (Currency first, Time last)
+const tools = [
+  {
+    title: "Currency Converter",
+    desc: "Check live and historical exchange rates.",
+    icon: "💱",
+    link: "/currency-converter",
+    color: "from-orange-400 to-red-500"
+  },
+  {
+    title: "Strong Password Generator",
+    desc: "Create secure, randomized passwords instantly.",
+    icon: "🔒",
+    link: "/password-generator",
+    color: "from-blue-400 to-blue-600"
+  },
+  {
+    title: "QR Code Generator",
+    desc: "Convert URLs and text to custom QR codes.",
+    icon: "📱",
+    link: "/qr-generator",
+    color: "from-green-400 to-emerald-600"
+  },
+  {
+    title: "Date & Time Converter",
+    desc: "Compare global time zones and local sunrise/sunset.",
+    icon: "🌍",
+    link: "/time-converter",
+    color: "from-purple-400 to-indigo-600"
+  }
+];
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
@@ -89,19 +90,35 @@ export default function Home() {
           </span>
         </h1>
 
-        {/* Quick Link Pills */}
-        <div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
-          {tools.map((tool, idx) => (
-            <Link 
-              key={idx} 
-              href={tool.link}
-              className="px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200 rounded-full text-sm font-semibold text-slate-700 hover:bg-white hover:shadow-sm hover:border-blue-300 transition-all flex items-center gap-2"
-            >
-              <span>{tool.icon}</span>
-              {tool.title.replace(' Generator', '').replace(' Converter', '')}
-            </Link>
-          ))}
-        </div>
+        {/* Updated Quick Link Pills */}
+<div className="flex flex-wrap justify-center gap-3 max-w-2xl mx-auto">
+  {tools.map((tool, idx) => {
+    // Custom labels for the bubbles
+    let label = tool.title.replace(' Generator', '').replace(' Converter', '');
+    let icon = tool.icon;
+
+    if (tool.link === "/currency-converter") {
+      label = "Converter";
+      icon = "💵💶"; // USD and Euro symbols
+    }
+    
+    if (tool.link === "/password-generator") {
+      label = "Password";
+      icon = "💪"; // Muscular guy character
+    }
+
+    return (
+      <Link 
+        key={idx} 
+        href={tool.link}
+        className="px-4 py-2 bg-white/60 backdrop-blur-sm border border-slate-200 rounded-full text-sm font-semibold text-slate-700 hover:bg-white hover:shadow-sm hover:border-blue-300 transition-all flex items-center gap-2"
+      >
+        <span>{icon}</span>
+        {label}
+      </Link>
+    );
+  })}
+</div>
       </header>
 
       {/* Tool Grid & Ad Integration */}

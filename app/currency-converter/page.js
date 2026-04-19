@@ -188,9 +188,7 @@ export default function CurrencyConverter() {
           <div className="mt-8 text-center text-sm text-slate-400">
             {rates ? `Market rates last updated: ${lastUpdated} UTC` : 'Fetching live exchange rates...'}
             <div className="mt-8 text-center">
-  <p className="text-sm text-slate-400 mb-2">
-    {rates ? `Market rates last updated: ${lastUpdated} UTC` : 'Fetching live exchange rates...'}
-  </p>
+  
   <Link href="/contact" className="text-xs text-blue-500 hover:underline">
     Need another currency? Request it here.
   </Link>

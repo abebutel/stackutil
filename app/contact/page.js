@@ -10,7 +10,7 @@ export default function Contact() {
           Have a suggestion for a new tool or need another currency added to our converter? We'd love to hear from you.
         </p>
         <a 
-          href="mailto:support@stackutil.com" 
+          href="mailto:iluvthissite@gmail.com" 
           className="inline-block w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
         >
           Email support@stackutil.com
