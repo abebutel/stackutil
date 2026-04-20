@@ -47,8 +47,7 @@
     "article_p1": "In an era where automated brute-force attacks can test billions of combinations per second, a simple phrase is no longer enough. A strong password acts as the frontline defense for your privacy.",
     "article_title2": "What Makes a Password Truly Secure?",
     "article_p2": "Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack."
-  }
-},
+  },
 "currency_app": {
     "amount": "Amount",
     "converted": "Converted",
@@ -89,3 +88,4 @@
     "article_p3": "The British Imperial and US Customary systems trace their roots back to medieval England, where measurements were based on physical artifacts, agriculture, and the human body. An inch was three grains of barley placed end-to-end, and a foot was exactly that—the length of a human foot.",
     "article_p4": "When sourcing raw materials globally, precision in these conversions is critical. A manufacturer buying sterling silver or precious metals, for example, must constantly navigate the difference between the standard Avoirdupois ounce (28.34 grams) and the Troy ounce (31.10 grams) used strictly for precious metals. A miscalculation in units can severely impact yield targets and bottom-line profit margins."
   }
+}
