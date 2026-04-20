@@ -139,7 +139,8 @@ export default function UnitConverter() {
           <div className="flex overflow-x-auto hide-scrollbar border-b border-slate-100 mb-6 pb-2 px-2">
             {categories.map((cat) => (
               <button key={cat} onClick={() => setActiveCategory(cat)} className={`px-6 py-3 font-bold text-sm whitespace-nowrap transition-colors border-b-2 ${activeCategory === cat ? 'border-blue-600 text-blue-600' : 'border-transparent text-slate-400 hover:text-slate-600'}`}>
-                {cat}
+                {/* Dynamically lookup the translated category name, fallback to English key if not found */}
+                {dict?.unit_app?.categories?.[cat] || cat}
               </button>
             ))}
           </div>
@@ -149,7 +150,12 @@ export default function UnitConverter() {
                 <div className="flex items-center bg-slate-50 border border-slate-200 rounded-xl focus-within:ring-2 focus-within:ring-blue-500 transition-all overflow-hidden">
                   <input type="number" value={fromValue} onChange={(e) => setFromValue(e.target.value)} className="w-full bg-transparent py-6 px-6 text-2xl font-black text-slate-800 outline-none" placeholder="0" />
                   <select value={fromUnit} onChange={(e) => setFromUnit(e.target.value)} className="bg-slate-100 font-bold text-slate-700 py-6 px-4 outline-none cursor-pointer border-l border-slate-200 h-full min-w-[140px]">
-                    {Object.keys(UNITS[activeCategory]).map((unit) => <option key={unit} value={unit}>{unit}</option>)}
+                    {Object.keys(UNITS[activeCategory]).map((unit) => (
+                      <option key={unit} value={unit}>
+                        {/* Dynamically lookup the translated unit name */}
+                        {dict?.unit_app?.units?.[unit] || unit}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -160,7 +166,12 @@ export default function UnitConverter() {
                 <div className="flex items-center bg-slate-100 border border-transparent rounded-xl overflow-hidden">
                   <div className="w-full bg-transparent py-6 px-6 text-2xl font-black text-blue-600 overflow-hidden text-ellipsis">{toValue || '0'}</div>
                   <select value={toUnit} onChange={(e) => setToUnit(e.target.value)} className="bg-slate-200 font-bold text-slate-700 py-6 px-4 outline-none cursor-pointer border-l border-slate-300 h-full min-w-[140px]">
-                    {Object.keys(UNITS[activeCategory]).map((unit) => <option key={unit} value={unit}>{unit}</option>)}
+                    {Object.keys(UNITS[activeCategory]).map((unit) => (
+                      <option key={unit} value={unit}>
+                        {/* Dynamically lookup the translated unit name */}
+                        {dict?.unit_app?.units?.[unit] || unit}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>

@@ -79,13 +79,22 @@
     "article_title2": "Cómo un conversor te mantiene sincronizado",
     "article_p2": "Un conversor de zona horaria confiable elimina las conjeturas de los cambios de horario de verano y las complejas compensaciones UTC."
   },
-  "unit_app": {
+ "unit_app": {
     "article_title1": "La Brecha Global de Medición",
     "article_p1": "El mundo opera en gran medida en dos sistemas: el sistema Métrico y los sistemas Imperial/US Customary.",
     "article_title2": "El Sistema Métrico: Una Revolución de Base 10",
     "article_p2": "Nacido de la Revolución Francesa, el sistema métrico fue diseñado para ser universal, lógico y basado en el mundo natural.",
     "article_title3": "Los Sistemas Imperial y Avoirdupois",
     "article_p3": "Los sistemas imperial británico y estadounidense tienen sus raíces en la Inglaterra medieval.",
-    "article_p4": "Al obtener materias primas a nivel mundial, la precisión en estas conversiones es crítica para evitar errores de cálculo costosos."
+    "article_p4": "Al obtener materias primas a nivel mundial, la precisión en estas conversiones es crítica para evitar errores de cálculo costosos.",
+    "categories": {
+      "Length": "Longitud", "Weight": "Peso", "Area": "Área", "Volume": "Volumen", "Temperature": "Temperatura"
+    },
+    "units": {
+      "Meter": "Metro", "Kilometer": "Kilómetro", "Centimeter": "Centímetro", "Millimeter": "Milímetro", "Mile": "Milla", "Yard": "Yarda", "Foot": "Pie", "Inch": "Pulgada",
+      "Gram": "Gramo", "Kilogram": "Kilogramo", "Milligram": "Miligramo", "Metric Ton": "Tonelada métrica", "Pound": "Libra", "Ounce": "Onza", "Troy Ounce": "Onza troy",
+      "Square Meter": "Metro cuadrado", "Square Kilometer": "Kilómetro cuadrado", "Hectare": "Hectárea", "Acre": "Acre", "Square Mile": "Milla cuadrada", "Square Foot": "Pie cuadrado", "Square Inch": "Pulgada cuadrada",
+      "Liter": "Litro", "Milliliter": "Mililitro", "Cubic Meter": "Metro cúbico", "US Gallon": "Galón (US)", "US Quart": "Cuarto (US)", "US Pint": "Pinta (US)", "US Cup": "Taza (US)", "US Fluid Ounce": "Onza líquida (US)",
+      "Celsius": "Celsius", "Fahrenheit": "Fahrenheit", "Kelvin": "Kelvin"
+    }
   }
-}

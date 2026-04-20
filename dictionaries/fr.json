@@ -86,6 +86,15 @@
     "article_p2": "Né de la Révolution française, le système métrique a été conçu pour être universel, logique et basé sur le monde naturel.",
     "article_title3": "Les systèmes impérial et avoirdupois",
     "article_p3": "Les systèmes impérial britannique et américain tirent leurs racines de l'Angleterre médiévale.",
-    "article_p4": "Lors de l'approvisionnement en matières premières à l'échelle mondiale, la précision de ces conversions est essentielle pour éviter les erreurs de calcul coûteuses."
+    "article_p4": "Lors de l'approvisionnement en matières premières à l'échelle mondiale, la précision de ces conversions est essentielle pour éviter les erreurs de calcul coûteuses.",
+    "categories": {
+      "Length": "Longueur", "Weight": "Poids", "Area": "Surface", "Volume": "Volume", "Temperature": "Température"
+    },
+    "units": {
+      "Meter": "Mètre", "Kilometer": "Kilomètre", "Centimeter": "Centimètre", "Millimeter": "Millimètre", "Mile": "Mille", "Yard": "Yard", "Foot": "Pied", "Inch": "Pouce",
+      "Gram": "Gramme", "Kilogram": "Kilogramme", "Milligram": "Milligramme", "Metric Ton": "Tonne métrique", "Pound": "Livre", "Ounce": "Once", "Troy Ounce": "Once troy",
+      "Square Meter": "Mètre carré", "Square Kilometer": "Kilomètre carré", "Hectare": "Hectare", "Acre": "Acre", "Square Mile": "Mille carré", "Square Foot": "Pied carré", "Square Inch": "Pouce carré",
+      "Liter": "Litre", "Milliliter": "Millilitre", "Cubic Meter": "Mètre cube", "US Gallon": "Gallon (US)", "US Quart": "Quart (US)", "US Pint": "Pinte (US)", "US Cup": "Tasse (US)", "US Fluid Ounce": "Once liquide (US)",
+      "Celsius": "Celsius", "Fahrenheit": "Fahrenheit", "Kelvin": "Kelvin"
+    }
   }
-}

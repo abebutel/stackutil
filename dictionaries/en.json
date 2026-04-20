@@ -86,6 +86,15 @@
     "article_p2": "Born out of the French Revolution in 1799, the metric system was designed to be universal, logical, and based on the natural world. The meter was originally defined as one ten-millionth of the distance from the equator to the North Pole. Because it relies entirely on base-10 mathematics, converting between units (like millimeters to kilometers) requires simply moving a decimal point. Today, it is the official system for 95% of the global population.",
     "article_title3": "The Imperial and Avoirdupois Systems",
     "article_p3": "The British Imperial and US Customary systems trace their roots back to medieval England, where measurements were based on physical artifacts, agriculture, and the human body. An inch was three grains of barley placed end-to-end, and a foot was exactly that—the length of a human foot.",
-    "article_p4": "When sourcing raw materials globally, precision in these conversions is critical. A manufacturer buying sterling silver or precious metals, for example, must constantly navigate the difference between the standard Avoirdupois ounce (28.34 grams) and the Troy ounce (31.10 grams) used strictly for precious metals. A miscalculation in units can severely impact yield targets and bottom-line profit margins."
+    "article_p4": "When sourcing raw materials globally, precision in these conversions is critical. A manufacturer buying sterling silver or precious metals, for example, must constantly navigate the difference between the standard Avoirdupois ounce (28.34 grams) and the Troy ounce (31.10 grams) used strictly for precious metals. A miscalculation in units can severely impact yield targets and bottom-line profit margins.",
+    "categories": {
+      "Length": "Length", "Weight": "Weight", "Area": "Area", "Volume": "Volume", "Temperature": "Temperature"
+    },
+    "units": {
+      "Meter": "Meter", "Kilometer": "Kilometer", "Centimeter": "Centimeter", "Millimeter": "Millimeter", "Mile": "Mile", "Yard": "Yard", "Foot": "Foot", "Inch": "Inch",
+      "Gram": "Gram", "Kilogram": "Kilogram", "Milligram": "Milligram", "Metric Ton": "Metric Ton", "Pound": "Pound", "Ounce": "Ounce", "Troy Ounce": "Troy Ounce",
+      "Square Meter": "Square Meter", "Square Kilometer": "Square Kilometer", "Hectare": "Hectare", "Acre": "Acre", "Square Mile": "Square Mile", "Square Foot": "Square Foot", "Square Inch": "Square Inch",
+      "Liter": "Liter", "Milliliter": "Milliliter", "Cubic Meter": "Cubic Meter", "US Gallon": "US Gallon", "US Quart": "US Quart", "US Pint": "US Pint", "US Cup": "US Cup", "US Fluid Ounce": "US Fluid Ounce",
+      "Celsius": "Celsius", "Fahrenheit": "Fahrenheit", "Kelvin": "Kelvin"
+    }
   }
-}
