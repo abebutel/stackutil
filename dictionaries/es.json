@@ -31,11 +31,9 @@
       "title": "Conversor de Unidades",
       "desc": "Convierte longitud, peso, temperatura, área y volumen.",
       "bubble": "Unidades"
-    },
-
-  }
-}
-"password_app": {
+    }
+  },
+  "password_app": {
     "length": "Longitud de contraseña",
     "upper": "Mayúsculas (A-Z)",
     "lower": "Minúsculas (a-z)",
@@ -50,3 +48,4 @@
     "article_title2": "¿Qué hace que una contraseña sea segura?",
     "article_p2": "Los expertos recomiendan contraseñas de al menos 14 caracteres con una mezcla aleatoria. Al usar un generador, se elimina el sesgo humano y se crea una cadena criptográfica matemáticamente difícil de descifrar."
   }
+}

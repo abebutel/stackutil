@@ -31,10 +31,9 @@
       "title": "Unit Converter",
       "desc": "Convert length, weight, temperature, area, and volume.",
       "bubble": "Units"
-    },
-  }
-}
-"password_app": {
+    }
+  },
+  "password_app": {
     "length": "Password Length",
     "upper": "Uppercase (A-Z)",
     "lower": "Lowercase (a-z)",
@@ -49,3 +48,4 @@
     "article_title2": "What Makes a Password Truly Secure?",
     "article_p2": "Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack."
   }
+}

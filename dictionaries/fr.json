@@ -31,10 +31,9 @@
       "title": "Convertisseur d'Unités",
       "desc": "Convertissez la longueur, le poids, la température, la surface et le volume.",
       "bubble": "Unités"
-    },
-  }
-}
-"password_app": {
+    }
+  },
+  "password_app": {
     "length": "Longueur du mot de passe",
     "upper": "Majuscules (A-Z)",
     "lower": "Minuscules (a-z)",
@@ -49,3 +48,4 @@
     "article_title2": "Qu'est-ce qui rend un mot de passe vraiment sécurisé ?",
     "article_p2": "Les experts recommandent des mots de passe d'au moins 14 caractères incluant un mélange aléatoire. En utilisant un générateur aléatoire, vous créez une chaîne cryptographique mathématiquement difficile à pirater."
   }
+}
