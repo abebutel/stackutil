@@ -41,6 +41,11 @@
       "title": "Traductor de Texto",
       "desc": "Traduce texto al instante en docenas de idiomas.",
       "bubble": "Traducir"
+    },
+    "clothing": {
+      "title": "Conversor de Tallas",
+      "desc": "Convierte tallas de zapatos y ropa internacionalmente.",
+      "bubble": "Tallas"
     }
   },
   "password_app": {
@@ -138,5 +143,22 @@
     "article_p1": "Las herramientas de traducción modernas utilizan Traducción Automática Neuronal (NMT) para predecir el contexto de oraciones enteras en lugar de traducir palabra por palabra. Esto las hace increíblemente rápidas y confiables.",
     "article_title2": "Los Límites de la Traducción con IA",
     "article_p2": "Aunque son perfectos para una utilidad rápida, los traductores automatizados aún pueden tener dificultades con modismos culturales y jerga muy técnica."
+  },
+  "clothing_app": {
+    "category": "Categoría",
+    "gender": "Género",
+    "from": "Desde la región",
+    "to": "Hacia la región",
+    "size": "Seleccionar talla",
+    "result": "Talla convertida",
+    "shoes": "Zapatos",
+    "clothing": "Ropa",
+    "men": "Hombres",
+    "women": "Mujeres",
+    "kids": "Niños",
+    "article_title1": "Navegando por las tallas internacionales",
+    "article_p1": "Comprar ropa o zapatos en el extranjero puede ser frustrante. Los sistemas de tallas varían enormemente de un continente a otro.",
+    "article_title2": "¿Por qué varían las tallas?",
+    "article_p2": "Diferentes regiones desarrollaron sus estándares de forma independiente. Las tallas de EE. UU. y el Reino Unido se basan en el sistema imperial, mientras que las de la UE y Japón usan el sistema métrico."
   }
 }

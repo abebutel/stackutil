@@ -41,6 +41,11 @@
       "title": "Text Translator",
       "desc": "Translate text instantly across dozens of languages.",
       "bubble": "Translate"
+    },
+    "clothing": {
+      "title": "Size Converter",
+      "desc": "Convert shoe and clothing sizes internationally.",
+      "bubble": "Sizes"
     }
   },
   "password_app": {
@@ -138,5 +143,22 @@
     "article_p1": "Modern translation tools use advanced Neural Machine Translation (NMT) to predict the context of entire sentences rather than translating word-by-word. This makes them incredibly fast and reliable for everyday communication, travel, and basic document understanding.",
     "article_title2": "The Limits of AI Translation",
     "article_p2": "While perfect for quick utility, automated translators can still struggle with cultural idioms, heavy slang, and highly technical jargon. Always be cautious when translating legal or medical documents where nuance is critical."
+  },
+  "clothing_app": {
+    "category": "Category",
+    "gender": "Gender",
+    "from": "From Region",
+    "to": "To Region",
+    "size": "Select Size",
+    "result": "Converted Size",
+    "shoes": "Shoes",
+    "clothing": "Clothing",
+    "men": "Men",
+    "women": "Women",
+    "kids": "Kids",
+    "article_title1": "Navigating International Sizing",
+    "article_p1": "Buying clothes or shoes from overseas can be frustrating. A size 8 shoe in the US is completely different from a size 8 in the UK, and clothing sizes in Europe and Asia use entirely different baseline measurements.",
+    "article_title2": "Why Sizes Vary",
+    "article_p2": "Different regions developed their sizing standards independently. US and UK sizes historically rely on inches and the Imperial system, while EU and JP sizes rely on centimeters and the metric system. Always double-check specific brand sizing charts, as 'vanity sizing' can cause variations even within the same country!"
   }
 }

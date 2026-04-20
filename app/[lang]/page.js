@@ -41,6 +41,15 @@ export default function Home() {
       bubbleIcon: "💵💶"
     },
     {
+      title: dict?.tools?.clothing?.title || "Size Converter",
+      desc: dict?.tools?.clothing?.desc || "Convert shoe and clothing sizes internationally.",
+      icon: "👕",
+      link: `/${lang}/clothing-converter`,
+      color: "from-pink-400 to-rose-500",
+      bubbleLabel: dict?.tools?.clothing?.bubble || "Sizes",
+      bubbleIcon: "👕"
+    },
+    {
       title: dict?.tools?.time?.title || "Date & Time Converter",
       desc: dict?.tools?.time?.desc || "Compare global time zones and local sunrise/sunset.",
       icon: "🌍",

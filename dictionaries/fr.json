@@ -41,6 +41,11 @@
       "title": "Traducteur de Texte",
       "desc": "Traduisez instantanément du texte dans des dizaines de langues.",
       "bubble": "Traduire"
+    }.
+    "clothing": {
+      "title": "Convertisseur de Tailles",
+      "desc": "Convertissez les tailles de chaussures et de vêtements à l'international.",
+      "bubble": "Tailles"
     }
   },
   "password_app": {
@@ -138,5 +143,22 @@
     "article_p1": "Les outils de traduction modernes utilisent la Traduction Automatique Neuronale (TAN) pour prédire le contexte de phrases entières plutôt que de traduire mot à mot. Cela les rend incroyablement rapides et fiables pour la communication quotidienne.",
     "article_title2": "Les limites de la traduction par l'IA",
     "article_p2": "Bien que parfaits pour une utilité rapide, les traducteurs automatisés peuvent encore avoir des difficultés avec les expressions culturelles et le jargon très technique."
+  },
+  "clothing_app": {
+    "category": "Catégorie",
+    "gender": "Genre",
+    "from": "De la région",
+    "to": "Vers la région",
+    "size": "Sélectionner la taille",
+    "result": "Taille convertie",
+    "shoes": "Chaussures",
+    "clothing": "Vêtements",
+    "men": "Hommes",
+    "women": "Femmes",
+    "kids": "Enfants",
+    "article_title1": "Naviguer dans les tailles internationales",
+    "article_p1": "Acheter des vêtements ou des chaussures à l'étranger peut être frustrant. Les systèmes de tailles varient considérablement d'un continent à l'autre.",
+    "article_title2": "Pourquoi les tailles varient-elles ?",
+    "article_p2": "Les différentes régions ont développé leurs normes de manière indépendante. Les tailles américaines et britanniques s'appuient sur le système impérial, tandis que les tailles européennes et japonaises utilisent le système métrique."
   }
 }
