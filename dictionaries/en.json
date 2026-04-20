@@ -26,6 +26,11 @@
       "title": "Date & Time Converter",
       "desc": "Compare global time zones and local sunrise/sunset.",
       "bubble": "Time"
+    },
+    "unit": {
+      "title": "Unit Converter",
+      "desc": "Convert length, weight, temperature, area, and volume.",
+      "bubble": "Units"
     }
   }
 }

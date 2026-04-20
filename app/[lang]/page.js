@@ -23,6 +23,15 @@ export default function Home() {
   
   const toolsList = [
     {
+      title: dict?.tools?.unit?.title || "Unit Converter",
+      desc: dict?.tools?.unit?.desc || "Convert length, weight, temperature, area, and volume.",
+      icon: "📏",
+      link: `/${lang}/unit-converter`,
+      color: "from-teal-400 to-emerald-500",
+      bubbleLabel: dict?.tools?.unit?.bubble || "Units",
+      bubbleIcon: "📏"
+    },
+    {
       title: dict?.tools?.currency?.title || "Currency Converter",
       desc: dict?.tools?.currency?.desc || "Check live and historical exchange rates.",
       icon: "💱",

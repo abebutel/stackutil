@@ -81,10 +81,11 @@ export default function PasswordGenerator() {
   
   // 4. Localized Nav Menu array (using dictionary and current lang)
   const navTools = [
-    { title: dict?.tools.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
-    { title: dict?.tools.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
-    { title: dict?.tools.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
-    { title: dict?.tools.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
+    { title: dict?.tools?.unit?.title || "Unit Converter", icon: "📏", link: `/${lang}/unit-converter` },
+    { title: dict?.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
+    { title: dict?.tools?.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
+    { title: dict?.tools?.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
+    { title: dict?.tools?.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
   ];
 
   return (

@@ -26,6 +26,12 @@
       "title": "Conversor de Fecha y Hora",
       "desc": "Compara zonas horarias mundiales y el amanecer/atardecer local.",
       "bubble": "Hora"
+    },
+    "unit": {
+      "title": "Conversor de Unidades",
+      "desc": "Convierte longitud, peso, temperatura, área y volumen.",
+      "bubble": "Unidades"
     }
+
   }
 }

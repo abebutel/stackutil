@@ -26,6 +26,11 @@
       "title": "Convertisseur de Date et Heure",
       "desc": "Comparez les fuseaux horaires mondiaux et les levers/couchers de soleil locaux.",
       "bubble": "Heure"
+    },
+    "unit": {
+      "title": "Convertisseur d'Unités",
+      "desc": "Convertissez la longueur, le poids, la température, la surface et le volume.",
+      "bubble": "Unités"
     }
   }
 }
