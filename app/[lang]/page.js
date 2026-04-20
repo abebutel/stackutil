@@ -50,6 +50,15 @@ export default function Home() {
       bubbleIcon: "🌍"
     },
     {
+      title: dict?.tools?.hebrew?.title || "Hebrew Date",
+      desc: dict?.tools?.hebrew?.desc || "Convert between Gregorian and Hebrew calendar dates.",
+      icon: "🕍",
+      link: `/${lang}/hebrew-date`,
+      color: "from-blue-500 to-indigo-600",
+      bubbleLabel: dict?.tools?.hebrew?.bubble || "Hebrew Date",
+      bubbleIcon: "🕍"
+    },
+    {
       title: dict?.tools?.password?.title || "Strong Password Generator",
       desc: dict?.tools?.password?.desc || "Create secure, randomized passwords instantly.",
       icon: "💪", 

@@ -27,6 +27,11 @@
       "desc": "Comparez les fuseaux horaires mondiaux et les levers/couchers de soleil locaux.",
       "bubble": "Heure"
     },
+    "hebrew": {
+      "title": "Convertisseur de Date Hébraïque",
+      "desc": "Convertissez entre les dates des calendriers grégorien et hébraïque.",
+      "bubble": "Date Hébraïque"
+    },
     "unit": {
       "title": "Convertisseur d'Unités",
       "desc": "Convertissez la longueur, le poids, la température, la surface et le volume.",
@@ -97,5 +102,21 @@
       "Liter": "Litre", "Milliliter": "Millilitre", "Cubic Meter": "Mètre cube", "US Gallon": "Gallon (US)", "US Quart": "Quart (US)", "US Pint": "Pinte (US)", "US Cup": "Tasse (US)", "US Fluid Ounce": "Once liquide (US)",
       "Celsius": "Celsius", "Fahrenheit": "Fahrenheit", "Kelvin": "Kelvin"
     }
+  },
+  ,"hebrew_app": {
+    "today": "Date d'aujourd'hui",
+    "g2h": "Grégorien vers Hébreu",
+    "h2g": "Hébreu vers Grégorien",
+    "day": "Jour",
+    "month": "Mois",
+    "year": "Année",
+    "convert": "Convertir la date",
+    "result": "Résultat",
+    "loading": "Calcul en cours...",
+    "sunset_warning": "* Remarque : Les dates hébraïques commencent au coucher du soleil la veille.",
+    "article_title1": "Comprendre le calendrier luni-solaire",
+    "article_p1": "Contrairement au calendrier grégorien, qui est strictement solaire, le calendrier hébraïque est 'luni-solaire'. Cela signifie que les mois sont basés sur les phases de la lune, tandis que les années sont synchronisées avec les saisons solaires.",
+    "article_title2": "Le cycle bissextil de 19 ans",
+    "article_p2": "Une année lunaire pure compte environ 354 jours. Sans ajustement, les fêtes comme la Pâque dériveraient vers l'hiver. Pour éviter cela, le calendrier hébraïque ajoute un 'mois intercalaire' (Adar I) 7 fois au cours d'un cycle de 19 ans."
   }
 }

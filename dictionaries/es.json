@@ -27,6 +27,11 @@
       "desc": "Compara zonas horarias mundiales y el amanecer/atardecer local.",
       "bubble": "Hora"
     },
+    "hebrew": {
+      "title": "Conversor de Fecha Hebrea",
+      "desc": "Convierte entre fechas del calendario gregoriano y hebreo.",
+      "bubble": "Fecha Hebrea"
+    },
     "unit": {
       "title": "Conversor de Unidades",
       "desc": "Convierte longitud, peso, temperatura, área y volumen.",
@@ -97,5 +102,21 @@
       "Liter": "Litro", "Milliliter": "Mililitro", "Cubic Meter": "Metro cúbico", "US Gallon": "Galón (US)", "US Quart": "Cuarto (US)", "US Pint": "Pinta (US)", "US Cup": "Taza (US)", "US Fluid Ounce": "Onza líquida (US)",
       "Celsius": "Celsius", "Fahrenheit": "Fahrenheit", "Kelvin": "Kelvin"
     }
+  },
+  ,"hebrew_app": {
+    "today": "Fecha de Hoy",
+    "g2h": "Gregoriano a Hebreo",
+    "h2g": "Hebreo a Gregoriano",
+    "day": "Día",
+    "month": "Mes",
+    "year": "Año",
+    "convert": "Convertir Fecha",
+    "result": "Resultado",
+    "loading": "Calculando...",
+    "sunset_warning": "* Nota: Las fechas hebreas comienzan al atardecer del día anterior.",
+    "article_title1": "Entendiendo el calendario lunisolar",
+    "article_p1": "A diferencia del calendario gregoriano (estrictamente solar), el calendario hebreo es 'lunisolar'. Los meses se basan en las fases de la luna, mientras que los años se sincronizan con las estaciones solares.",
+    "article_title2": "El ciclo bisiesto de 19 años",
+    "article_p2": "Un año lunar puro tiene unos 354 días. Sin ajuste, festividades como la Pascua (primavera) se desplazarían al invierno. Para evitarlo, el calendario hebreo añade un 'mes bisiesto' (Adar I) 7 veces en un ciclo de 19 años."
   }
 }

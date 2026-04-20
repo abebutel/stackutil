@@ -27,6 +27,11 @@
       "desc": "Compare global time zones and local sunrise/sunset.",
       "bubble": "Time"
     },
+    "hebrew": {
+      "title": "Hebrew Date Converter",
+      "desc": "Convert between Gregorian and Hebrew calendar dates.",
+      "bubble": "Hebrew Date"
+    },
     "unit": {
       "title": "Unit Converter",
       "desc": "Convert length, weight, temperature, area, and volume.",
@@ -97,5 +102,21 @@
       "Liter": "Liter", "Milliliter": "Milliliter", "Cubic Meter": "Cubic Meter", "US Gallon": "US Gallon", "US Quart": "US Quart", "US Pint": "US Pint", "US Cup": "US Cup", "US Fluid Ounce": "US Fluid Ounce",
       "Celsius": "Celsius", "Fahrenheit": "Fahrenheit", "Kelvin": "Kelvin"
     }
+  },
+  ,"hebrew_app": {
+    "today": "Today's Date",
+    "g2h": "Gregorian to Hebrew",
+    "h2g": "Hebrew to Gregorian",
+    "day": "Day",
+    "month": "Month",
+    "year": "Year",
+    "convert": "Convert Date",
+    "result": "Conversion Result",
+    "loading": "Calculating...",
+    "sunset_warning": "* Note: Hebrew dates begin at sunset the night before.",
+    "article_title1": "Understanding the Lunisolar Calendar",
+    "article_p1": "Unlike the Gregorian calendar, which is strictly solar (based on the Earth's revolution around the sun), the Hebrew calendar is 'lunisolar'. This means the months are based on the phases of the moon, while the years are synchronized with the solar seasons.",
+    "article_title2": "The 19-Year Leap Cycle",
+    "article_p2": "A purely lunar year is about 354 days long, falling 11 days short of the solar year. Without adjustment, holidays like Passover (a spring festival) would drift into winter. To prevent this, the Hebrew calendar uses a 19-year cycle where an entire 'leap month' (Adar I) is added 7 times during the cycle, keeping the calendar perfectly aligned with the seasons."
   }
 }
