@@ -126,7 +126,7 @@
     "greg_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "heb_months": ["Nisan", "Iyyar", "Sivan", "Tamuz", "Av", "Elul", "Tishrei", "Cheshvan", "Kislev", "Tevet", "Sh'vat", "Adar I", "Adar II", "Adar"]
   },
-  ,"translator_app": {
+  "translator_app": {
     "source_text": "Enter text",
     "translation": "Translation",
     "translate_btn": "Translate",

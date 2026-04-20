@@ -126,7 +126,7 @@
     "greg_months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
     "heb_months": ["Nissan", "Iyar", "Sivan", "Tammouz", "Av", "Éloul", "Tichri", "Hechvan", "Kislev", "Tévet", "Chevat", "Adar I", "Adar II", "Adar"]
   },
-  ,"translator_app": {
+  "translator_app": {
     "source_text": "Entrer le texte",
     "translation": "Traduction",
     "translate_btn": "Traduire",
