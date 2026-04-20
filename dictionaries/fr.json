@@ -103,7 +103,7 @@
       "Celsius": "Celsius", "Fahrenheit": "Fahrenheit", "Kelvin": "Kelvin"
     }
   },
-  ,"hebrew_app": {
+  "hebrew_app": {
     "today": "Date d'aujourd'hui",
     "g2h": "Grégorien vers Hébreu",
     "h2g": "Hébreu vers Grégorien",
