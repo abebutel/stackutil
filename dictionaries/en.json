@@ -117,6 +117,8 @@
     "article_title1": "Understanding the Lunisolar Calendar",
     "article_p1": "Unlike the Gregorian calendar, which is strictly solar (based on the Earth's revolution around the sun), the Hebrew calendar is 'lunisolar'. This means the months are based on the phases of the moon, while the years are synchronized with the solar seasons.",
     "article_title2": "The 19-Year Leap Cycle",
-    "article_p2": "A purely lunar year is about 354 days long, falling 11 days short of the solar year. Without adjustment, holidays like Passover (a spring festival) would drift into winter. To prevent this, the Hebrew calendar uses a 19-year cycle where an entire 'leap month' (Adar I) is added 7 times during the cycle, keeping the calendar perfectly aligned with the seasons."
+    "article_p2": "A purely lunar year is about 354 days long, falling 11 days short of the solar year. Without adjustment, holidays like Passover (a spring festival) would drift into winter. To prevent this, the Hebrew calendar uses a 19-year cycle where an entire 'leap month' (Adar I) is added 7 times during the cycle, keeping the calendar perfectly aligned with the seasons.",
+    "greg_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "heb_months": ["Nisan", "Iyyar", "Sivan", "Tamuz", "Av", "Elul", "Tishrei", "Cheshvan", "Kislev", "Tevet", "Sh'vat", "Adar I", "Adar II", "Adar"]
   }
 }

@@ -117,6 +117,8 @@
     "article_title1": "Entendiendo el calendario lunisolar",
     "article_p1": "A diferencia del calendario gregoriano (estrictamente solar), el calendario hebreo es 'lunisolar'. Los meses se basan en las fases de la luna, mientras que los años se sincronizan con las estaciones solares.",
     "article_title2": "El ciclo bisiesto de 19 años",
-    "article_p2": "Un año lunar puro tiene unos 354 días. Sin ajuste, festividades como la Pascua (primavera) se desplazarían al invierno. Para evitarlo, el calendario hebreo añade un 'mes bisiesto' (Adar I) 7 veces en un ciclo de 19 años."
+    "article_p2": "Un año lunar puro tiene unos 354 días. Sin ajuste, festividades como la Pascua (primavera) se desplazarían al invierno. Para evitarlo, el calendario hebreo añade un 'mes bisiesto' (Adar I) 7 veces en un ciclo de 19 años.",
+    "greg_months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+    "heb_months": ["Nisán", "Iyar", "Siván", "Tamuz", "Av", "Elul", "Tishrei", "Jeshván", "Kislev", "Tevet", "Shvat", "Adar I", "Adar II", "Adar"]
   }
 }

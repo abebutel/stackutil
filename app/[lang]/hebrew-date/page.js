@@ -6,8 +6,9 @@ import { usePathname } from 'next/navigation';
 import LanguageSwitcher from '../../components/LanguageSwitcher';
 import { getDictionary } from '../../getDictionary';
 
-const GREG_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const HEB_MONTHS = ["Nisan", "Iyyar", "Sivan", "Tamuz", "Av", "Elul", "Tishrei", "Cheshvan", "Kislev", "Tevet", "Sh'vat", "Adar I", "Adar II", "Adar"];
+const GREG_MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+// The API strictly requires these exact English strings, so we keep them as a constant fallback
+const HEB_MONTHS_API = ["Nisan", "Iyyar", "Sivan", "Tamuz", "Av", "Elul", "Tishrei", "Cheshvan", "Kislev", "Tevet", "Sh'vat", "Adar I", "Adar II", "Adar"];
 
 export default function HebrewDate() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +34,7 @@ export default function HebrewDate() {
   // States
   const [todayHebrew, setTodayHebrew] = useState('');
   const [todayGreg, setTodayGreg] = useState('');
-  const [mode, setMode] = useState('g2h'); // 'g2h' or 'h2g'
+  const [mode, setMode] = useState('g2h'); 
   
   const [gDay, setGDay] = useState(new Date().getDate());
   const [gMonth, setGMonth] = useState(new Date().getMonth() + 1);
@@ -46,7 +47,10 @@ export default function HebrewDate() {
   const [result, setResult] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Fetch Today's Date on Mount
+  // Dynamically load translated month arrays
+  const displayGregMonths = dict?.hebrew_app?.greg_months || GREG_MONTHS_EN;
+  const displayHebMonths = dict?.hebrew_app?.heb_months || HEB_MONTHS_API;
+
   useEffect(() => {
     const fetchToday = async () => {
       const today = new Date();
@@ -57,15 +61,13 @@ export default function HebrewDate() {
       setTodayGreg(today.toLocaleDateString(lang === 'he' ? 'he-IL' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
       
       try {
-        // Fix: Explicitly pass the current day, month, and year to the API
         const res = await fetch(`https://www.hebcal.com/converter?cfg=json&gy=${gy}&gm=${gm}&gd=${gd}&g2h=1&strict=1`);
         const data = await res.json();
         
         setTodayHebrew(lang === 'he' ? data.hebrew : `${data.hd} ${data.hm} ${data.hy}`);
         
-        // Init Hebrew states to match today
         setHDay(data.hd);
-        setHMonth(data.hm);
+        setHMonth(data.hm); // API strictly uses English internally
         setHYear(data.hy);
       } catch (err) {
         console.error("Failed to fetch current date", err);
@@ -74,7 +76,6 @@ export default function HebrewDate() {
     fetchToday();
   }, [lang]);
 
-  // Convert Function
   const handleConvert = async () => {
     setIsLoading(true);
     try {
@@ -141,7 +142,6 @@ export default function HebrewDate() {
       <main className="max-w-3xl mx-auto px-6 pt-12">
         <h1 className="text-3xl font-bold mb-8 text-slate-800">🕍 {dict?.tools?.hebrew?.title || "Hebrew Date Converter"}</h1>
         
-        {/* Today's Date Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl shadow-lg p-6 mb-8 text-white flex flex-col items-center justify-center text-center">
           <p className="text-blue-200 text-sm font-bold uppercase tracking-widest mb-2">{dict?.hebrew_app?.today || "Today's Date"}</p>
           <h2 className="text-3xl font-black mb-1">{todayHebrew || '...'}</h2>
@@ -151,7 +151,6 @@ export default function HebrewDate() {
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">[AdSense Banner]</div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-12">
-          {/* Tabs */}
           <div className="flex bg-slate-100 p-1 rounded-xl mb-8">
             <button onClick={() => { setMode('g2h'); setResult(''); }} className={`flex-1 py-3 text-sm font-bold rounded-lg transition-all ${mode === 'g2h' ? 'bg-white shadow text-blue-600' : 'text-slate-500 hover:text-slate-700'}`}>
               {dict?.hebrew_app?.g2h || "Gregorian to Hebrew"}
@@ -170,8 +169,8 @@ export default function HebrewDate() {
               <label className="block text-xs font-bold text-slate-500 uppercase mb-2">{dict?.hebrew_app?.month || "Month"}</label>
               <select value={mode === 'g2h' ? gMonth : hMonth} onChange={(e) => mode === 'g2h' ? setGMonth(e.target.value) : setHMonth(e.target.value)} className="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl font-bold text-lg outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer">
                 {mode === 'g2h' 
-                  ? GREG_MONTHS.map((m, i) => <option key={m} value={i+1}>{m}</option>)
-                  : HEB_MONTHS.map(m => <option key={m} value={m}>{m}</option>)
+                  ? displayGregMonths.map((m, i) => <option key={`g-${i}`} value={i+1}>{m}</option>)
+                  : displayHebMonths.map((m, i) => <option key={`h-${i}`} value={HEB_MONTHS_API[i]}>{m}</option>) /* Show translated text, but save English API string as value */
                 }
               </select>
             </div>

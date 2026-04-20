@@ -117,6 +117,8 @@
     "article_title1": "Comprendre le calendrier luni-solaire",
     "article_p1": "Contrairement au calendrier grégorien, qui est strictement solaire, le calendrier hébraïque est 'luni-solaire'. Cela signifie que les mois sont basés sur les phases de la lune, tandis que les années sont synchronisées avec les saisons solaires.",
     "article_title2": "Le cycle bissextil de 19 ans",
-    "article_p2": "Une année lunaire pure compte environ 354 jours. Sans ajustement, les fêtes comme la Pâque dériveraient vers l'hiver. Pour éviter cela, le calendrier hébraïque ajoute un 'mois intercalaire' (Adar I) 7 fois au cours d'un cycle de 19 ans."
+    "article_p2": "Une année lunaire pure compte environ 354 jours. Sans ajustement, les fêtes comme la Pâque dériveraient vers l'hiver. Pour éviter cela, le calendrier hébraïque ajoute un 'mois intercalaire' (Adar I) 7 fois au cours d'un cycle de 19 ans.",
+    "greg_months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+    "heb_months": ["Nissan", "Iyar", "Sivan", "Tammouz", "Av", "Éloul", "Tichri", "Hechvan", "Kislev", "Tévet", "Chevat", "Adar I", "Adar II", "Adar"]
   }
 }
