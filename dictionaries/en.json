@@ -4,6 +4,28 @@
   },
   "home": {
     "hero_title": "Free Everyday Web Tools.",
-    "seo_title": "Fast. Secure. Right in your Browser."
+    "seo_title": "Your go to FREE online tools hub",
+  },
+  "tools": {
+    "currency": {
+      "title": "Currency Converter",
+      "desc": "Check live and historical exchange rates.",
+      "bubble": "Converter"
+    },
+    "password": {
+      "title": "Strong Password Generator",
+      "desc": "Create secure, randomized passwords instantly.",
+      "bubble": "Password"
+    },
+    "qr": {
+      "title": "QR Code Generator",
+      "desc": "Convert URLs and text to custom QR codes.",
+      "bubble": "QR Code"
+    },
+    "time": {
+      "title": "Date & Time Converter",
+      "desc": "Compare global time zones and local sunrise/sunset.",
+      "bubble": "Time"
+    }
   }
 }

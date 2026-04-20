@@ -2,16 +2,24 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import LanguageSwitcher from '../../components/LanguageSwitcher';
+import { getDictionary } from '../../getDictionary';
 
 export default function PasswordGenerator() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const tools = [
-    { title: "Currency Converter", icon: "💱", link: "/currency-converter" },
-    { title: "Strong Password Generator", icon: "💪", link: "/password-generator" },
-    { title: "QR Code Generator", icon: "📱", link: "/qr-generator" },
-    { title: "Date & Time Converter", icon: "🌍", link: "/time-converter" }
-  ];
+  const [dict, setDict] = useState(null);
+  
+  // 1. Get the language from the URL
+  const pathname = usePathname();
+  const lang = pathname.split('/')[1] || 'en';
 
+  // 2. Fetch the dictionary
+  useEffect(() => {
+    getDictionary(lang).then(setDict).catch(() => getDictionary('en').then(setDict));
+  }, [lang]);
+
+  // --- Password Generator Logic ---
   const [password, setPassword] = useState('');
   const [length, setLength] = useState(14);
   const [includeUpper, setIncludeUpper] = useState(true);
@@ -51,7 +59,6 @@ export default function PasswordGenerator() {
     }
 
     const remainingLength = Math.max(0, length - guaranteedChars.length);
-    
     for (let i = 0; i < remainingLength; i++) {
       newPassword += charset[Math.floor(Math.random() * charset.length)];
     }
@@ -71,46 +78,68 @@ export default function PasswordGenerator() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  // 3. Wait for dictionary to load before rendering
+  if (!dict) return <div className="min-h-screen bg-slate-50"></div>;
+
+  // 4. Localized Nav Menu array (using dictionary and current lang)
+  const navTools = [
+    { title: dict.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
+    { title: dict.tools?.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
+    { title: dict.tools?.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
+    { title: dict.tools?.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
+  ];
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-24">
+      
+      {/* Navigation */}
       <nav className="px-8 py-4 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
-          <Link href="/" className="text-2xl font-black tracking-tight text-slate-800">
+          {/* Logo links back to the localized homepage */}
+          <Link href={`/${lang}`} className="text-2xl font-black tracking-tight text-slate-800">
             Stack<span className="text-blue-600">Util</span>
           </Link>
           
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-slate-600 hover:text-blue-600 focus:outline-none">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
+          <div className="flex items-center">
+            <LanguageSwitcher />
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-slate-600 hover:text-blue-600 focus:outline-none">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4 md:hidden">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Available Tools</span>
-            {tools.map((tool, idx) => (
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+              {dict.nav?.tools || "Available Tools"}
+            </span>
+            {navTools.map((tool, idx) => (
               <Link key={idx} href={tool.link} onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium">
-                <span>{tool.icon}</span>
-                <span>{tool.title}</span>
+                <span>{tool.icon}</span><span>{tool.title}</span>
               </Link>
             ))}
           </div>
         )}
       </nav>
 
+      {/* Main App Container */}
       <main className="max-w-3xl mx-auto px-6 pt-12">
-        <h1 className="text-3xl font-bold mb-8">💪 Password Generator</h1>
+        <h1 className="text-3xl font-bold mb-8">
+          💪 {dict.tools?.password?.title || "Strong Password Generator"}
+        </h1>
 
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">
           [AdSense Banner]
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-12">
+          {/* Password Display Box */}
           <div className="relative flex items-center bg-slate-100 rounded-xl p-4 mb-8 border border-slate-200">
             <input type="text" value={password} readOnly className="bg-transparent w-full text-2xl font-mono tracking-wider text-slate-800 focus:outline-none" />
             <button onClick={generatePassword} className="p-2 hover:bg-slate-200 rounded-lg transition-colors mr-2 text-xl" title="Regenerate">🔄</button>
@@ -119,11 +148,11 @@ export default function PasswordGenerator() {
             </button>
           </div>
 
+          {/* Controls */}
           <div className="space-y-6">
             <div>
               <div className="flex justify-between items-center mb-4">
                 <label className="font-semibold text-slate-700">Password Length</label>
-                {/* NEW: Input field linked to the slider */}
                 <input 
                   type="number" 
                   min="5" 
@@ -175,6 +204,7 @@ export default function PasswordGenerator() {
           </div>
         </div>
 
+        {/* Note: You can add these strings to your JSON dictionaries later! */}
         <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl border border-slate-100">
           <h2 className="text-2xl font-bold mb-4">The Importance of Strong Passwords</h2>
           <p className="mb-4 text-slate-600 leading-relaxed">In an era where automated brute-force attacks can test billions of combinations per second, a simple phrase is no longer enough. A strong password acts as the frontline defense for your privacy.</p>

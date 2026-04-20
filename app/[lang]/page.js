@@ -21,41 +21,53 @@ export default function Home() {
       .catch(() => getDictionary('en').then(setDict));
   }, [lang]);
 
-  const tools = [
+  // ... (top of file remains the same)
+  
+  // Prevent the page from rendering until the dictionary is loaded
+  if (!dict) return <div className="min-h-screen bg-slate-50"></div>;
+
+  // Dynamically build the tools array USING the dictionary and the current language
+  const toolsList = [
     {
-      title: "Currency Converter",
-      desc: "Check live and historical exchange rates.",
+      title: dict.tools.currency.title,
+      desc: dict.tools.currency.desc,
       icon: "💱",
-      link: "/currency-converter",
-      color: "from-orange-400 to-red-500"
+      link: `/${lang}/currency-converter`, // <-- Adds the language to the URL!
+      color: "from-orange-400 to-red-500",
+      bubbleLabel: dict.tools.currency.bubble,
+      bubbleIcon: "💵💶"
     },
     {
-      title: "Strong Password Generator",
-      desc: "Create secure, randomized passwords instantly.",
+      title: dict.tools.password.title,
+      desc: dict.tools.password.desc,
       icon: "💪", 
-      link: "/password-generator",
-      color: "from-blue-400 to-blue-600"
+      link: `/${lang}/password-generator`,
+      color: "from-blue-400 to-blue-600",
+      bubbleLabel: dict.tools.password.bubble,
+      bubbleIcon: "💪"
     },
     {
-      title: "QR Code Generator",
-      desc: "Convert URLs and text to custom QR codes.",
+      title: dict.tools.qr.title,
+      desc: dict.tools.qr.desc,
       icon: "📱",
-      link: "/qr-generator",
-      color: "from-green-400 to-emerald-600"
+      link: `/${lang}/qr-generator`,
+      color: "from-green-400 to-emerald-600",
+      bubbleLabel: dict.tools.qr.bubble,
+      bubbleIcon: "📱"
     },
     {
-      title: "Date & Time Converter",
-      desc: "Compare global time zones and local sunrise/sunset.",
+      title: dict.tools.time.title,
+      desc: dict.tools.time.desc,
       icon: "🌍",
-      link: "/time-converter",
-      color: "from-purple-400 to-indigo-600"
+      link: `/${lang}/time-converter`,
+      color: "from-purple-400 to-indigo-600",
+      bubbleLabel: dict.tools.time.bubble,
+      bubbleIcon: "🌍"
     }
   ];
 
-  // Prevent the page from rendering until the dictionary is loaded to avoid a flash of missing text
-  if (!dict) return <div className="min-h-screen bg-slate-50"></div>;
-
   return (
+    // ... inside your return statement, ensure you use `toolsList.map` instead of `tools.map`
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       
       {/* Navigation (Fixed double hamburger menu) */}
