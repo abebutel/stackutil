@@ -5,14 +5,16 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "StackUtil | Free Everyday Web Tools",
+  title: "StackUtil | Your go to FREE online tools hub",
   description: "Your go to FREE online tools hub",
 };
 
-// We receive the `lang` parameter from the folder structure
-export default function RootLayout({ children, params: { lang } }) {
+// Add 'async' here and await the params
+export default async function RootLayout({ children, params }) {
+  const resolvedParams = await params;
+  const lang = resolvedParams.lang || 'en';
+
   return (
-    // Set text direction to RTL if Hebrew, otherwise LTR
     <html lang={lang} dir={lang === 'he' ? 'rtl' : 'ltr'}>
       <head>
         <Script

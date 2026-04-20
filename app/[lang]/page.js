@@ -2,16 +2,23 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // <-- Added this
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { getDictionary } from '../getDictionary';
 
-export default function Home({ params: { lang } }) {
+export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dict, setDict] = useState(null);
+  
+  // Safely extract the language directly from the URL
+  const pathname = usePathname();
+  const lang = pathname.split('/')[1] || 'en';
 
-  // Fetch the dictionary based on the URL language parameter
   useEffect(() => {
-    getDictionary(lang).then(setDict);
+    // Fetch the dictionary, with a fallback catch just in case
+    getDictionary(lang)
+      .then(setDict)
+      .catch(() => getDictionary('en').then(setDict));
   }, [lang]);
 
   const tools = [

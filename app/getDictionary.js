@@ -1,4 +1,3 @@
-
 const dictionaries = {
   en: () => import('../dictionaries/en.json').then((module) => module.default),
   he: () => import('../dictionaries/he.json').then((module) => module.default),
@@ -6,4 +5,8 @@ const dictionaries = {
   es: () => import('../dictionaries/es.json').then((module) => module.default),
 };
 
-export const getDictionary = async (locale) => dictionaries[locale]();
+export const getDictionary = async (locale) => {
+  // If the locale is missing or unknown, safely default to English
+  const safeLocale = dictionaries[locale] ? locale : 'en';
+  return dictionaries[safeLocale]();
+};
