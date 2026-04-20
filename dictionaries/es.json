@@ -4,6 +4,28 @@
   },
   "home": {
     "hero_title": "Herramientas Web Diarias Gratuitas.",
-    "seo_title": "Rápido. Seguro. Directamente en tu navegador."
+    "seo_title": "Tu centro de herramientas en línea GRATUITAS"
+  },
+  "tools": {
+    "currency": {
+      "title": "Conversor de Divisas",
+      "desc": "Consulta tipos de cambio en vivo e históricos.",
+      "bubble": "Conversor"
+    },
+    "password": {
+      "title": "Generador de Contraseñas Seguras",
+      "desc": "Crea contraseñas seguras y aleatorias al instante.",
+      "bubble": "Contraseña"
+    },
+    "qr": {
+      "title": "Generador de Códigos QR",
+      "desc": "Convierte URL y texto en códigos QR personalizados.",
+      "bubble": "Código QR"
+    },
+    "time": {
+      "title": "Conversor de Fecha y Hora",
+      "desc": "Compara zonas horarias mundiales y el amanecer/atardecer local.",
+      "bubble": "Hora"
+    }
   }
 }

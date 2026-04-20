@@ -4,6 +4,28 @@
   },
   "home": {
     "hero_title": "Outils Web Quotidiens Gratuits.",
-    "seo_title": "Rapide. Sécurisé. Directement dans votre navigateur."
+    "seo_title": "Votre centre d'outils en ligne GRATUITS"
+  },
+  "tools": {
+    "currency": {
+      "title": "Convertisseur de Devises",
+      "desc": "Consultez les taux de change en direct et historiques.",
+      "bubble": "Convertisseur"
+    },
+    "password": {
+      "title": "Générateur de Mots de Passe Forts",
+      "desc": "Créez des mots de passe sécurisés et aléatoires instantanément.",
+      "bubble": "Mot de Passe"
+    },
+    "qr": {
+      "title": "Générateur de Code QR",
+      "desc": "Convertissez des URL et du texte en codes QR personnalisés.",
+      "bubble": "Code QR"
+    },
+    "time": {
+      "title": "Convertisseur de Date et Heure",
+      "desc": "Comparez les fuseaux horaires mondiaux et les levers/couchers de soleil locaux.",
+      "bubble": "Heure"
+    }
   }
 }
