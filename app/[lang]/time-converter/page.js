@@ -11,10 +11,33 @@ export default function TimeConverter() {
   const [dict, setDict] = useState(null);
   
   const pathname = usePathname();
-  const lang = pathname.split('/')[1] || 'en';
+  const lang = pathname?.split('/')[1] || 'en';
+
+  const [isDictLoading, setIsDictLoading] = useState(true);
 
   useEffect(() => {
-    getDictionary(lang).then(setDict).catch(() => getDictionary('en').then(setDict));
+    let isMounted = true;
+    setIsDictLoading(true);
+
+    getDictionary(lang)
+      .then((newDict) => {
+        if (isMounted) {
+          setDict(newDict);
+          setIsDictLoading(false);
+        }
+      })
+      .catch(() => {
+        getDictionary('en').then((fallbackDict) => {
+          if (isMounted) {
+            setDict(fallbackDict);
+            setIsDictLoading(false);
+          }
+        });
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, [lang]);
 
   const [mounted, setMounted] = useState(false);
@@ -73,7 +96,8 @@ export default function TimeConverter() {
 
   const removeCity = (cityName) => setSelectedCities(selectedCities.filter(c => c.name !== cityName));
 
-  
+  if (isDictLoading || !dict || !mounted) return <div className="min-h-screen bg-slate-50"></div>;
+
   const localTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const navTools = [
     { title: dict?.tools?.unit?.title || "Unit Converter", icon: "📏", link: `/${lang}/unit-converter` },
@@ -101,7 +125,7 @@ export default function TimeConverter() {
         </div>
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{dict.nav?.tools || "Available Tools"}</span>
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{dict?.nav?.tools || "Available Tools"}</span>
             {navTools.map((tool, idx) => (
               <Link key={idx} href={tool.link} onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium">
                 <span>{tool.icon}</span><span>{tool.title}</span>
@@ -112,28 +136,31 @@ export default function TimeConverter() {
       </nav>
 
       <main className="max-w-5xl mx-auto px-6 pt-12">
-        <h1 className="text-3xl font-bold mb-8 text-slate-800">🌍 {dict?.tools.time?.title || "Date & Time Converter"}</h1>
+        <h1 className="text-3xl font-bold mb-8 text-slate-800">🌍 {dict?.tools?.time?.title || "Date & Time Converter"}</h1>
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">[AdSense Banner]</div>
         
         <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-lg p-8 mb-8 text-white relative overflow-hidden">
           <div className="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end">
             <div>
-              <p className="text-indigo-100 font-semibold mb-1 uppercase tracking-wider text-sm">{localSunData.city ? `Local Time (${localSunData.city})` : 'Your Local Time'}</p>
+              <p className="text-indigo-100 font-semibold mb-1 uppercase tracking-wider text-sm">{localSunData.city ? `${dict?.time_app?.local_time || "Local Time"} (${localSunData.city})` : (dict?.time_app?.your_local || 'Your Local Time')}</p>
               <h2 className="text-5xl font-black mb-2 tracking-tight">{time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}</h2>
               <p className="text-xl font-medium text-indigo-50">{time.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <p className="text-indigo-200 text-sm mt-1 border border-indigo-400/30 inline-block px-3 py-1 rounded-full bg-indigo-900/20">
+                {dict?.time_app?.zone || "Zone"}: {localTz}
+              </p>
             </div>
             <div className="mt-6 md:mt-0 bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 flex gap-6">
-              <div><p className="text-xs text-indigo-200 uppercase tracking-wider mb-1">Sunrise 🌅</p><p className="font-semibold text-lg">{localSunData.sunrise ? localSunData.sunrise.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '--:--'}</p></div>
-              <div><p className="text-xs text-indigo-200 uppercase tracking-wider mb-1">Sunset 🌙</p><p className="font-semibold text-lg">{localSunData.sunset ? localSunData.sunset.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '--:--'}</p></div>
+              <div><p className="text-xs text-indigo-200 uppercase tracking-wider mb-1">{dict?.time_app?.sunrise || "Sunrise"} 🌅</p><p className="font-semibold text-lg">{localSunData.sunrise ? localSunData.sunrise.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '--:--'}</p></div>
+              <div><p className="text-xs text-indigo-200 uppercase tracking-wider mb-1">{dict?.time_app?.sunset || "Sunset"} 🌙</p><p className="font-semibold text-lg">{localSunData.sunset ? localSunData.sunset.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '--:--'}</p></div>
             </div>
           </div>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-12">
           <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4 relative">
-            <h3 className="text-xl font-bold text-slate-800">Compare Cities ({selectedCities.length}/4)</h3>
+            <h3 className="text-xl font-bold text-slate-800">{dict?.time_app?.compare || "Compare Cities"} ({selectedCities.length}/4)</h3>
             <div className="relative z-20 min-w-[280px] w-full md:w-auto">
-              <input type="text" placeholder={isSearching ? "Searching..." : "+ Search for a city..."} value={searchQuery} onChange={handleSearch} disabled={selectedCities.length >= 4} className="w-full p-3 pl-10 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" />
+              <input type="text" placeholder={isSearching ? (dict?.time_app?.searching || "Searching...") : (dict?.time_app?.search || "+ Search for a city...")} value={searchQuery} onChange={handleSearch} disabled={selectedCities.length >= 4} className="w-full p-3 pl-10 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50" />
               <span className="absolute left-3 top-3 text-slate-400 text-lg">🔍</span>
               {searchResults.length > 0 && (
                 <ul className="absolute top-full left-0 w-full mt-2 bg-white border border-slate-200 shadow-xl rounded-xl overflow-hidden max-h-60 overflow-y-auto z-50">
@@ -161,8 +188,20 @@ export default function TimeConverter() {
                 </div>
               </div>
             ))}
+            {selectedCities.length === 0 && (
+              <div className="col-span-1 md:col-span-2 text-center py-12 text-slate-400 border-2 border-dashed border-slate-200 rounded-xl">
+                {dict?.time_app?.empty || "Search and add a city to compare time zones and daylight hours."}
+              </div>
+            )}
           </div>
         </div>
+
+        <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+          <h2 className="text-2xl font-bold mb-4 text-slate-800">{dict?.time_app?.article_title1 || "Mastering Global Time Zones"}</h2>
+          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.time_app?.article_p1 || "Whether you are coordinating a remote team meeting, scheduling international client calls, or planning a trip abroad, managing time zone differences can be a logistical headache. Miscalculating a time difference can lead to missed deadlines or awkward 3:00 AM phone calls."}</p>
+          <h3 className="text-xl font-bold mb-3 mt-8 text-slate-800">{dict?.time_app?.article_title2 || "How a Time Converter Keeps You Synchronized"}</h3>
+          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.time_app?.article_p2 || "A reliable time zone converter removes the guesswork from daylight saving time shifts and complex UTC offsets. By visualizing multiple cities side-by-side alongside their local sunrise and sunset times, you can easily pinpoint the perfect overlap for global business hours. Always ensure you are checking the date as well as the time—when it's late afternoon in New York, it may already be the next business day in Tokyo or Sydney!"}</p>
+        </article>
       </main>
     </div>
   );
