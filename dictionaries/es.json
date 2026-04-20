@@ -36,6 +36,11 @@
       "title": "Conversor de Unidades",
       "desc": "Convierte longitud, peso, temperatura, área y volumen.",
       "bubble": "Unidades"
+    },
+    "translator": {
+      "title": "Traductor de Texto",
+      "desc": "Traduce texto al instante en docenas de idiomas.",
+      "bubble": "Traducir"
     }
   },
   "password_app": {
@@ -120,5 +125,18 @@
     "article_p2": "Un año lunar puro tiene unos 354 días. Sin ajuste, festividades como la Pascua (primavera) se desplazarían al invierno. Para evitarlo, el calendario hebreo añade un 'mes bisiesto' (Adar I) 7 veces en un ciclo de 19 años.",
     "greg_months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
     "heb_months": ["Nisán", "Iyar", "Siván", "Tamuz", "Av", "Elul", "Tishrei", "Jeshván", "Kislev", "Tevet", "Shvat", "Adar I", "Adar II", "Adar"]
+  },
+  ,"translator_app": {
+    "source_text": "Ingresar texto",
+    "translation": "Traducción",
+    "translate_btn": "Traducir",
+    "translating": "Traduciendo...",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "error": "La traducción falló. Por favor, inténtelo de nuevo.",
+    "article_title1": "Traducción Automática vs. Matiz Humano",
+    "article_p1": "Las herramientas de traducción modernas utilizan Traducción Automática Neuronal (NMT) para predecir el contexto de oraciones enteras en lugar de traducir palabra por palabra. Esto las hace increíblemente rápidas y confiables.",
+    "article_title2": "Los Límites de la Traducción con IA",
+    "article_p2": "Aunque son perfectos para una utilidad rápida, los traductores automatizados aún pueden tener dificultades con modismos culturales y jerga muy técnica."
   }
 }

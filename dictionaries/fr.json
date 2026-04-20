@@ -36,6 +36,11 @@
       "title": "Convertisseur d'Unités",
       "desc": "Convertissez la longueur, le poids, la température, la surface et le volume.",
       "bubble": "Unités"
+    },
+    "translator": {
+      "title": "Traducteur de Texte",
+      "desc": "Traduisez instantanément du texte dans des dizaines de langues.",
+      "bubble": "Traduire"
     }
   },
   "password_app": {
@@ -120,5 +125,18 @@
     "article_p2": "Une année lunaire pure compte environ 354 jours. Sans ajustement, les fêtes comme la Pâque dériveraient vers l'hiver. Pour éviter cela, le calendrier hébraïque ajoute un 'mois intercalaire' (Adar I) 7 fois au cours d'un cycle de 19 ans.",
     "greg_months": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
     "heb_months": ["Nissan", "Iyar", "Sivan", "Tammouz", "Av", "Éloul", "Tichri", "Hechvan", "Kislev", "Tévet", "Chevat", "Adar I", "Adar II", "Adar"]
+  },
+  ,"translator_app": {
+    "source_text": "Entrer le texte",
+    "translation": "Traduction",
+    "translate_btn": "Traduire",
+    "translating": "Traduction en cours...",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "error": "La traduction a échoué. Veuillez réessayer.",
+    "article_title1": "Traduction Automatique vs. Nuance Humaine",
+    "article_p1": "Les outils de traduction modernes utilisent la Traduction Automatique Neuronale (TAN) pour prédire le contexte de phrases entières plutôt que de traduire mot à mot. Cela les rend incroyablement rapides et fiables pour la communication quotidienne.",
+    "article_title2": "Les limites de la traduction par l'IA",
+    "article_p2": "Bien que parfaits pour une utilité rapide, les traducteurs automatisés peuvent encore avoir des difficultés avec les expressions culturelles et le jargon très technique."
   }
 }

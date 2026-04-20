@@ -75,12 +75,13 @@ export default function PasswordGenerator() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const navTools = [
+ const navTools = [
     { title: dict?.tools?.unit?.title || "Unit Converter", icon: "📏", link: `/${lang}/unit-converter` },
     { title: dict?.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
     { title: dict?.tools?.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` },
     { title: dict?.tools?.hebrew?.title || "Hebrew Date", icon: "🕍", link: `/${lang}/hebrew-date` },
     { title: dict?.tools?.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
+    { title: dict?.tools?.translator?.title || "Text Translator", icon: "🗣️", link: `/${lang}/translator` },
     { title: dict?.tools?.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` }
   ];
 

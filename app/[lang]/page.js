@@ -68,6 +68,15 @@ export default function Home() {
       bubbleIcon: "💪"
     },
     {
+      title: dict?.tools?.translator?.title || "Text Translator",
+      desc: dict?.tools?.translator?.desc || "Translate text instantly across dozens of languages.",
+      icon: "🗣️", 
+      link: `/${lang}/translator`,
+      color: "from-indigo-400 to-purple-500",
+      bubbleLabel: dict?.tools?.translator?.bubble || "Translate",
+      bubbleIcon: "🗣️"
+    },
+    {
       title: dict?.tools?.qr?.title || "QR Code Generator",
       desc: dict?.tools?.qr?.desc || "Convert URLs and text to custom QR codes.",
       icon: "📱",

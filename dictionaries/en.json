@@ -36,6 +36,11 @@
       "title": "Unit Converter",
       "desc": "Convert length, weight, temperature, area, and volume.",
       "bubble": "Units"
+    },
+    "translator": {
+      "title": "Text Translator",
+      "desc": "Translate text instantly across dozens of languages.",
+      "bubble": "Translate"
     }
   },
   "password_app": {
@@ -120,5 +125,18 @@
     "article_p2": "A purely lunar year is about 354 days long, falling 11 days short of the solar year. Without adjustment, holidays like Passover (a spring festival) would drift into winter. To prevent this, the Hebrew calendar uses a 19-year cycle where an entire 'leap month' (Adar I) is added 7 times during the cycle, keeping the calendar perfectly aligned with the seasons.",
     "greg_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "heb_months": ["Nisan", "Iyyar", "Sivan", "Tamuz", "Av", "Elul", "Tishrei", "Cheshvan", "Kislev", "Tevet", "Sh'vat", "Adar I", "Adar II", "Adar"]
+  },
+  ,"translator_app": {
+    "source_text": "Enter text",
+    "translation": "Translation",
+    "translate_btn": "Translate",
+    "translating": "Translating...",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "error": "Translation failed. Please try again.",
+    "article_title1": "Machine Translation vs. Human Nuance",
+    "article_p1": "Modern translation tools use advanced Neural Machine Translation (NMT) to predict the context of entire sentences rather than translating word-by-word. This makes them incredibly fast and reliable for everyday communication, travel, and basic document understanding.",
+    "article_title2": "The Limits of AI Translation",
+    "article_p2": "While perfect for quick utility, automated translators can still struggle with cultural idioms, heavy slang, and highly technical jargon. Always be cautious when translating legal or medical documents where nuance is critical."
   }
 }
