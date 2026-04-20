@@ -11,11 +11,36 @@ export default function QRGenerator() {
   const [dict, setDict] = useState(null);
   
   const pathname = usePathname();
-  const lang = pathname.split('/')[1] || 'en';
+  // Extract language from URL. Default to 'en' if undefined.
+  const lang = pathname?.split('/')[1] || 'en';
+
+  // Fix: Add a loading state to force the UI to wait for the correct dictionary
+  const [isDictLoading, setIsDictLoading] = useState(true);
 
   useEffect(() => {
-    getDictionary(lang).then(setDict).catch(() => getDictionary('en').then(setDict));
-  }, [lang]);
+    let isMounted = true; // Cleanup flag
+    setIsDictLoading(true); // Always set to loading when URL changes
+
+    getDictionary(lang)
+      .then((newDict) => {
+        if (isMounted) {
+          setDict(newDict);
+          setIsDictLoading(false);
+        }
+      })
+      .catch(() => {
+        getDictionary('en').then((fallbackDict) => {
+          if (isMounted) {
+            setDict(fallbackDict);
+            setIsDictLoading(false);
+          }
+        });
+      });
+
+    return () => {
+      isMounted = false; // Prevent state updates if component unmounts mid-fetch
+    };
+  }, [lang]); // Dependency array strictly watches `lang`
 
   const [text, setText] = useState('https://stackutil.com');
   const [qrUrl, setQrUrl] = useState('');
@@ -46,6 +71,9 @@ export default function QRGenerator() {
       console.error("Download failed", error);
     }
   };
+
+  // Fix: Return empty div *only* while actively switching languages to prevent text flashing
+  if (isDictLoading || !dict) return <div className="min-h-screen bg-slate-50"></div>;
 
   const navTools = [
     { title: dict?.tools?.unit?.title || "Unit Converter", icon: "📏", link: `/${lang}/unit-converter` },
