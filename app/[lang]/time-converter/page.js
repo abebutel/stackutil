@@ -73,14 +73,13 @@ export default function TimeConverter() {
 
   const removeCity = (cityName) => setSelectedCities(selectedCities.filter(c => c.name !== cityName));
 
-  if (!mounted || !dict) return <div className="min-h-screen bg-slate-50"></div>;
-
+  
   const localTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const navTools = [
-    { title: dict.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
-    { title: dict.tools?.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
-    { title: dict.tools?.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
-    { title: dict.tools?.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
+    { title: dict?.tools.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
+    { title: dict?.tools.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
+    { title: dict?.tools.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
+    { title: dict?.tools.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
   ];
 
   return (
@@ -112,7 +111,7 @@ export default function TimeConverter() {
       </nav>
 
       <main className="max-w-5xl mx-auto px-6 pt-12">
-        <h1 className="text-3xl font-bold mb-8 text-slate-800">🌍 {dict.tools?.time?.title || "Date & Time Converter"}</h1>
+        <h1 className="text-3xl font-bold mb-8 text-slate-800">🌍 {dict?.tools.time?.title || "Date & Time Converter"}</h1>
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">[AdSense Banner]</div>
         
         <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl shadow-lg p-8 mb-8 text-white relative overflow-hidden">

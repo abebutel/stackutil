@@ -79,13 +79,12 @@ export default function CurrencyConverter() {
     return finalAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   };
 
-  if (!dict) return <div className="min-h-screen bg-slate-50"></div>;
-
+  
   const navTools = [
-    { title: dict.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
-    { title: dict.tools?.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
-    { title: dict.tools?.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
-    { title: dict.tools?.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
+    { title: dict?.tools.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
+    { title: dict?.tools.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
+    { title: dict?.tools.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
+    { title: dict?.tools.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
   ];
 
   return (
@@ -117,7 +116,7 @@ export default function CurrencyConverter() {
       </nav>
 
       <main className="max-w-4xl mx-auto px-6 pt-12">
-        <h1 className="text-3xl font-bold mb-8 text-slate-800">💱 {dict.tools?.currency?.title || "Live Currency Converter"}</h1>
+        <h1 className="text-3xl font-bold mb-8 text-slate-800">💱 {dict?.tools.currency?.title || "Live Currency Converter"}</h1>
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">[AdSense Banner]</div>
         
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-10 mb-12 relative overflow-hidden">

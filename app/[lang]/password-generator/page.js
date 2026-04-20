@@ -78,15 +78,13 @@ export default function PasswordGenerator() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  // 3. Wait for dictionary to load before rendering
-  if (!dict) return <div className="min-h-screen bg-slate-50"></div>;
-
+  
   // 4. Localized Nav Menu array (using dictionary and current lang)
   const navTools = [
-    { title: dict.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
-    { title: dict.tools?.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
-    { title: dict.tools?.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
-    { title: dict.tools?.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
+    { title: dict?.tools.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
+    { title: dict?.tools.password?.title || "Password Generator", icon: "💪", link: `/${lang}/password-generator` },
+    { title: dict?.tools.qr?.title || "QR Code Generator", icon: "📱", link: `/${lang}/qr-generator` },
+    { title: dict?.tools.time?.title || "Date & Time Converter", icon: "🌍", link: `/${lang}/time-converter` }
   ];
 
   return (
@@ -131,7 +129,7 @@ export default function PasswordGenerator() {
       {/* Main App Container */}
       <main className="max-w-3xl mx-auto px-6 pt-12">
         <h1 className="text-3xl font-bold mb-8">
-          💪 {dict.tools?.password?.title || "Strong Password Generator"}
+          💪 {dict?.tools.password?.title || "Strong Password Generator"}
         </h1>
 
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">
