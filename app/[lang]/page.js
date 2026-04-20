@@ -41,6 +41,15 @@ export default function Home() {
       bubbleIcon: "💵💶"
     },
     {
+      title: dict?.tools?.time?.title || "Date & Time Converter",
+      desc: dict?.tools?.time?.desc || "Compare global time zones and local sunrise/sunset.",
+      icon: "🌍",
+      link: `/${lang}/time-converter`,
+      color: "from-purple-400 to-indigo-600",
+      bubbleLabel: dict?.tools?.time?.bubble || "Time",
+      bubbleIcon: "🌍"
+    },
+    {
       title: dict?.tools?.password?.title || "Strong Password Generator",
       desc: dict?.tools?.password?.desc || "Create secure, randomized passwords instantly.",
       icon: "💪", 
@@ -57,15 +66,6 @@ export default function Home() {
       color: "from-green-400 to-emerald-600",
       bubbleLabel: dict?.tools?.qr?.bubble || "QR Code",
       bubbleIcon: "📱"
-    },
-    {
-      title: dict?.tools?.time?.title || "Date & Time Converter",
-      desc: dict?.tools?.time?.desc || "Compare global time zones and local sunrise/sunset.",
-      icon: "🌍",
-      link: `/${lang}/time-converter`,
-      color: "from-purple-400 to-indigo-600",
-      bubbleLabel: dict?.tools?.time?.bubble || "Time",
-      bubbleIcon: "🌍"
     }
   ];
 
