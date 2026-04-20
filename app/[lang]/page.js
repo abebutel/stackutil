@@ -95,7 +95,7 @@ export default function Home() {
         </div>
 
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4 md:hidden">
+          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
               {dict?.nav?.tools || "Available Tools"}
             </span>

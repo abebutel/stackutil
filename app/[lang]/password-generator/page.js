@@ -10,16 +10,13 @@ export default function PasswordGenerator() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dict, setDict] = useState(null);
   
-  // 1. Get the language from the URL
   const pathname = usePathname();
   const lang = pathname.split('/')[1] || 'en';
 
-  // 2. Fetch the dictionary
   useEffect(() => {
     getDictionary(lang).then(setDict).catch(() => getDictionary('en').then(setDict));
   }, [lang]);
 
-  // --- Password Generator Logic ---
   const [password, setPassword] = useState('');
   const [length, setLength] = useState(14);
   const [includeUpper, setIncludeUpper] = useState(true);
@@ -78,8 +75,6 @@ export default function PasswordGenerator() {
     setTimeout(() => setCopied(false), 2000);
   };
 
-  
-  // 4. Localized Nav Menu array (using dictionary and current lang)
   const navTools = [
     { title: dict?.tools?.unit?.title || "Unit Converter", icon: "📏", link: `/${lang}/unit-converter` },
     { title: dict?.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
@@ -90,34 +85,25 @@ export default function PasswordGenerator() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans pb-24">
-      
-      {/* Navigation */}
       <nav className="px-8 py-4 bg-white/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
-          {/* Logo links back to the localized homepage */}
           <Link href={`/${lang}`} className="text-2xl font-black tracking-tight text-slate-800">
             Stack<span className="text-blue-600">Util</span>
           </Link>
-          
           <div className="flex items-center">
             <LanguageSwitcher />
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-slate-600 hover:text-blue-600 focus:outline-none">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                )}
+                {isMenuOpen ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /> : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />}
               </svg>
             </button>
           </div>
         </div>
 
+        {/* Removed md:hidden here so it works on desktop! */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4 md:hidden">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
-              {dict.nav?.tools || "Available Tools"}
-            </span>
+          <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{dict?.nav?.tools || "Available Tools"}</span>
             {navTools.map((tool, idx) => (
               <Link key={idx} href={tool.link} onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium">
                 <span>{tool.icon}</span><span>{tool.title}</span>
@@ -127,10 +113,9 @@ export default function PasswordGenerator() {
         )}
       </nav>
 
-      {/* Main App Container */}
       <main className="max-w-3xl mx-auto px-6 pt-12">
         <h1 className="text-3xl font-bold mb-8">
-          💪 {dict?.tools.password?.title || "Strong Password Generator"}
+          💪 {dict?.tools?.password?.title || "Strong Password Generator"}
         </h1>
 
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">
@@ -138,77 +123,60 @@ export default function PasswordGenerator() {
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-12">
-          {/* Password Display Box */}
           <div className="relative flex items-center bg-slate-100 rounded-xl p-4 mb-8 border border-slate-200">
             <input type="text" value={password} readOnly className="bg-transparent w-full text-2xl font-mono tracking-wider text-slate-800 focus:outline-none" />
             <button onClick={generatePassword} className="p-2 hover:bg-slate-200 rounded-lg transition-colors mr-2 text-xl" title="Regenerate">🔄</button>
             <button onClick={copyToClipboard} className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
-              {copied ? 'Copied!' : 'Copy'}
+              {copied ? (dict?.password_app?.copied || 'Copied!') : (dict?.password_app?.copy || 'Copy')}
             </button>
           </div>
 
-          {/* Controls */}
           <div className="space-y-6">
             <div>
               <div className="flex justify-between items-center mb-4">
-                <label className="font-semibold text-slate-700">Password Length</label>
-                <input 
-                  type="number" 
-                  min="5" 
-                  max="128" 
-                  value={length} 
-                  onChange={(e) => setLength(Number(e.target.value))}
-                  className="w-20 p-2 text-center font-bold text-blue-600 bg-blue-50 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
+                <label className="font-semibold text-slate-700">{dict?.password_app?.length || "Password Length"}</label>
+                <input type="number" min="5" max="128" value={length} onChange={(e) => setLength(Number(e.target.value))} className="w-20 p-2 text-center font-bold text-blue-600 bg-blue-50 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
-              <input 
-                type="range" 
-                min="5" 
-                max="128" 
-                value={length} 
-                onChange={(e) => setLength(Number(e.target.value))}
-                className="w-full accent-blue-600 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer"
-              />
+              <input type="range" min="5" max="128" value={length} onChange={(e) => setLength(Number(e.target.value))} className="w-full accent-blue-600 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer" />
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeUpper} onChange={() => setIncludeUpper(!includeUpper)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span className="text-sm font-medium">Uppercase (A-Z)</span>
+                <span className="text-sm font-medium">{dict?.password_app?.upper || "Uppercase (A-Z)"}</span>
               </label>
               <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeLower} onChange={() => setIncludeLower(!includeLower)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span className="text-sm font-medium">Lowercase (a-z)</span>
+                <span className="text-sm font-medium">{dict?.password_app?.lower || "Lowercase (a-z)"}</span>
               </label>
               <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeNumbers} onChange={() => setIncludeNumbers(!includeNumbers)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span className="text-sm font-medium">Numbers (0-9)</span>
+                <span className="text-sm font-medium">{dict?.password_app?.numbers || "Numbers (0-9)"}</span>
               </label>
               <label className="flex items-center space-x-3 cursor-pointer p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors">
                 <input type="checkbox" checked={includeSymbols} onChange={() => setIncludeSymbols(!includeSymbols)} className="w-5 h-5 accent-blue-600 rounded" />
-                <span className="text-sm font-medium">Symbols (!@#$%)</span>
+                <span className="text-sm font-medium">{dict?.password_app?.symbols || "Symbols (!@#$%)"}</span>
               </label>
             </div>
 
             <div className="grid grid-cols-2 gap-6 pt-4 border-t border-slate-100">
               <div>
-                <label className="block text-sm font-semibold text-slate-500 mb-1">Min Numbers</label>
+                <label className="block text-sm font-semibold text-slate-500 mb-1">{dict?.password_app?.min_num || "Min Numbers"}</label>
                 <input type="number" min="0" value={minNumbers} onChange={(e) => setMinNumbers(Number(e.target.value))} className="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-slate-500 mb-1">Min Symbols</label>
+                <label className="block text-sm font-semibold text-slate-500 mb-1">{dict?.password_app?.min_sym || "Min Symbols"}</label>
                 <input type="number" min="0" value={minSymbols} onChange={(e) => setMinSymbols(Number(e.target.value))} className="w-full p-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Note: You can add these strings to your JSON dictionaries later! */}
         <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl border border-slate-100">
-          <h2 className="text-2xl font-bold mb-4">The Importance of Strong Passwords</h2>
-          <p className="mb-4 text-slate-600 leading-relaxed">In an era where automated brute-force attacks can test billions of combinations per second, a simple phrase is no longer enough. A strong password acts as the frontline defense for your privacy.</p>
-          <h3 className="text-xl font-bold mb-3 mt-8">What Makes a Password Truly Secure?</h3>
-          <p className="mb-4 text-slate-600 leading-relaxed">Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack.</p>
+          <h2 className="text-2xl font-bold mb-4">{dict?.password_app?.article_title1 || "The Importance of Strong Passwords"}</h2>
+          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.password_app?.article_p1 || "In an era where automated brute-force attacks can test billions of combinations per second, a simple phrase is no longer enough. A strong password acts as the frontline defense for your privacy."}</p>
+          <h3 className="text-xl font-bold mb-3 mt-8">{dict?.password_app?.article_title2 || "What Makes a Password Truly Secure?"}</h3>
+          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.password_app?.article_p2 || "Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack."}</p>
         </article>
       </main>
     </div>

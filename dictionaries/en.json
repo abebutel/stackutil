@@ -31,6 +31,21 @@
       "title": "Unit Converter",
       "desc": "Convert length, weight, temperature, area, and volume.",
       "bubble": "Units"
-    }
+    },
   }
 }
+"password_app": {
+    "length": "Password Length",
+    "upper": "Uppercase (A-Z)",
+    "lower": "Lowercase (a-z)",
+    "numbers": "Numbers (0-9)",
+    "symbols": "Symbols (!@#$%)",
+    "min_num": "Min Numbers",
+    "min_sym": "Min Symbols",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "article_title1": "The Importance of Strong Passwords",
+    "article_p1": "In an era where automated brute-force attacks can test billions of combinations per second, a simple phrase is no longer enough. A strong password acts as the frontline defense for your privacy.",
+    "article_title2": "What Makes a Password Truly Secure?",
+    "article_p2": "Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack."
+  }
