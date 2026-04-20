@@ -65,6 +65,11 @@ export default function UnitConverter() {
     const val = parseFloat(fromValue);
     if (isNaN(val)) return;
 
+    // GUARD: Prevent crash during tab transition if units don't match the new category yet
+    if (!UNITS[activeCategory][fromUnit] || !UNITS[activeCategory][toUnit]) {
+      return;
+    }
+
     if (activeCategory === 'Temperature') {
       let tempCelsius;
       // Convert to Celsius first
@@ -165,7 +170,7 @@ export default function UnitConverter() {
                   />
                   <select 
                     value={fromUnit} 
-                    onChange={(e) => setFromFrom(e.target.value)}
+                    onChange={(e) => setFromUnit(e.target.value)} // TYPO FIXED HERE
                     className="bg-slate-100 font-bold text-slate-700 py-6 px-4 outline-none cursor-pointer border-l border-slate-200 h-full min-w-[140px]"
                   >
                     {Object.keys(UNITS[activeCategory]).map((unit) => (
