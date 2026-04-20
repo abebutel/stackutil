@@ -50,18 +50,25 @@ export default function HebrewDate() {
   useEffect(() => {
     const fetchToday = async () => {
       const today = new Date();
+      const gy = today.getFullYear();
+      const gm = today.getMonth() + 1;
+      const gd = today.getDate();
+
       setTodayGreg(today.toLocaleDateString(lang === 'he' ? 'he-IL' : 'en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }));
+      
       try {
-        const res = await fetch(`https://www.hebcal.com/converter?cfg=json&date=now&g2h=1&strict=1`);
+        // Fix: Explicitly pass the current day, month, and year to the API
+        const res = await fetch(`https://www.hebcal.com/converter?cfg=json&gy=${gy}&gm=${gm}&gd=${gd}&g2h=1&strict=1`);
         const data = await res.json();
+        
         setTodayHebrew(lang === 'he' ? data.hebrew : `${data.hd} ${data.hm} ${data.hy}`);
         
-        // Init Hebrew states to today
+        // Init Hebrew states to match today
         setHDay(data.hd);
         setHMonth(data.hm);
         setHYear(data.hy);
       } catch (err) {
-        console.error(err);
+        console.error("Failed to fetch current date", err);
       }
     };
     fetchToday();
