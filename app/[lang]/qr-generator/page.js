@@ -20,7 +20,6 @@ export default function QRGenerator() {
   const [text, setText] = useState('https://stackutil.com');
   const [qrUrl, setQrUrl] = useState('');
 
-  // Zero-cost QR Generation using goqr.me API
   useEffect(() => {
     if (text.trim() === '') {
       setQrUrl('');
@@ -48,7 +47,6 @@ export default function QRGenerator() {
     }
   };
 
-  
   const navTools = [
     { title: dict?.tools?.unit?.title || "Unit Converter", icon: "📏", link: `/${lang}/unit-converter` },
     { title: dict?.tools?.currency?.title || "Currency Converter", icon: "💱", link: `/${lang}/currency-converter` },
@@ -75,7 +73,7 @@ export default function QRGenerator() {
         </div>
         {isMenuOpen && (
           <div className="absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-lg py-4 px-8 flex flex-col space-y-4">
-            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{dict.nav?.tools || "Available Tools"}</span>
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">{dict?.nav?.tools || "Available Tools"}</span>
             {navTools.map((tool, idx) => (
               <Link key={idx} href={tool.link} onClick={() => setIsMenuOpen(false)} className="flex items-center space-x-3 text-slate-600 hover:text-blue-600 font-medium">
                 <span>{tool.icon}</span><span>{tool.title}</span>
@@ -86,24 +84,24 @@ export default function QRGenerator() {
       </nav>
 
       <main className="max-w-4xl mx-auto px-6 pt-12">
-        <h1 className="text-3xl font-bold mb-8 text-slate-800">📱 {dict?.tools.qr?.title || "QR Code Generator"}</h1>
+        <h1 className="text-3xl font-bold mb-8 text-slate-800">📱 {dict?.tools?.qr?.title || "QR Code Generator"}</h1>
         <div className="w-full h-24 bg-slate-200 border border-slate-300 border-dashed flex items-center justify-center text-slate-400 text-sm mb-8 rounded-lg">[AdSense Banner]</div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-10 mb-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-10">
           
           <div className="w-full flex-1">
-            <label className="block text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">Your Link or Text</label>
+            <label className="block text-sm font-semibold text-slate-500 uppercase tracking-wider mb-2">{dict?.qr_app?.label || "Your Link or Text"}</label>
             <textarea 
               value={text} 
               onChange={(e) => setText(e.target.value)}
-              placeholder="Enter URL, text, or Wi-Fi details..."
+              placeholder={dict?.qr_app?.placeholder || "Enter URL, text, or Wi-Fi details..."}
               className="w-full h-32 p-4 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800 resize-none font-medium mb-4"
             />
           </div>
 
           <div className="w-full flex-1 flex flex-col items-center justify-center bg-slate-50 border border-slate-200 rounded-2xl p-8">
             <div className="w-48 h-48 bg-white border border-slate-200 rounded-xl flex items-center justify-center mb-6 shadow-sm overflow-hidden p-2">
-              {qrUrl ? <img src={qrUrl} alt="Generated QR Code" className="w-full h-full object-contain" /> : <span className="text-slate-400">Waiting for input...</span>}
+              {qrUrl ? <img src={qrUrl} alt="Generated QR Code" className="w-full h-full object-contain" /> : <span className="text-slate-400">{dict?.qr_app?.waiting || "Waiting for input..."}</span>}
             </div>
             
             <button 
@@ -111,7 +109,7 @@ export default function QRGenerator() {
               disabled={!qrUrl}
               className="w-full py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-blue-200"
             >
-              Download PNG
+              {dict?.qr_app?.download || "Download PNG"}
             </button>
           </div>
         </div>

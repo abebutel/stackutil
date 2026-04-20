@@ -48,4 +48,44 @@
     "article_title2": "What Makes a Password Truly Secure?",
     "article_p2": "Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack."
   }
-}
+},
+"currency_app": {
+    "amount": "Amount",
+    "converted": "Converted",
+    "fetching": "Fetching live exchange rates...",
+    "updated": "Market rates last updated:",
+    "request": "Need another currency? Request it here.",
+    "article_title1": "Understanding Exchange Rates",
+    "article_p1": "Exchange rates dictate the value of one currency against another, fluctuating constantly based on global economics, inflation rates, and geopolitical events. Whether you are pricing international goods, buying raw materials overseas, or budgeting a vacation, accurate currency conversion is vital.",
+    "article_p2": "When using a currency converter, you are typically seeing the \"interbank\" rate—the rate banks use when trading with each other. Consumer rates at airports or credit card processors will often include a slight markup. Tracking these market rates daily helps you forecast future costs for global transactions and maintain healthy profit margins."
+  },
+  "qr_app": {
+    "label": "Your Link or Text",
+    "placeholder": "Enter URL, text, or Wi-Fi details...",
+    "waiting": "Waiting for input...",
+    "download": "Download PNG"
+  },
+  "time_app": {
+    "local_time": "Local Time",
+    "your_local": "Your Local Time",
+    "zone": "Zone",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "compare": "Compare Cities",
+    "search": "+ Search for a city...",
+    "searching": "Searching...",
+    "empty": "Search and add a city to compare time zones and daylight hours.",
+    "article_title1": "Mastering Global Time Zones",
+    "article_p1": "Whether you are coordinating a remote team meeting, scheduling international client calls, or planning a trip abroad, managing time zone differences can be a logistical headache. Miscalculating a time difference can lead to missed deadlines or awkward 3:00 AM phone calls.",
+    "article_title2": "How a Time Converter Keeps You Synchronized",
+    "article_p2": "A reliable time zone converter removes the guesswork from daylight saving time shifts and complex UTC offsets. By visualizing multiple cities side-by-side alongside their local sunrise and sunset times, you can easily pinpoint the perfect overlap for global business hours. Always ensure you are checking the date as well as the time—when it's late afternoon in New York, it may already be the next business day in Tokyo or Sydney!"
+  },
+  "unit_app": {
+    "article_title1": "The Global Measurement Divide",
+    "article_p1": "The world largely operates on two distinct systems of measurement: the Metric system (International System of Units, or SI) and the Imperial/US Customary systems. Understanding the conversion between these standards is essential for everything from baking a cake to international logistics and engineering.",
+    "article_title2": "The Metric System: A Base-10 Revolution",
+    "article_p2": "Born out of the French Revolution in 1799, the metric system was designed to be universal, logical, and based on the natural world. The meter was originally defined as one ten-millionth of the distance from the equator to the North Pole. Because it relies entirely on base-10 mathematics, converting between units (like millimeters to kilometers) requires simply moving a decimal point. Today, it is the official system for 95% of the global population.",
+    "article_title3": "The Imperial and Avoirdupois Systems",
+    "article_p3": "The British Imperial and US Customary systems trace their roots back to medieval England, where measurements were based on physical artifacts, agriculture, and the human body. An inch was three grains of barley placed end-to-end, and a foot was exactly that—the length of a human foot.",
+    "article_p4": "When sourcing raw materials globally, precision in these conversions is critical. A manufacturer buying sterling silver or precious metals, for example, must constantly navigate the difference between the standard Avoirdupois ounce (28.34 grams) and the Troy ounce (31.10 grams) used strictly for precious metals. A miscalculation in units can severely impact yield targets and bottom-line profit margins."
+  }

@@ -48,4 +48,44 @@
     "article_title2": "Qu'est-ce qui rend un mot de passe vraiment sécurisé ?",
     "article_p2": "Les experts recommandent des mots de passe d'au moins 14 caractères incluant un mélange aléatoire. En utilisant un générateur aléatoire, vous créez une chaîne cryptographique mathématiquement difficile à pirater."
   }
-}
+},
+"currency_app": {
+    "amount": "Montant",
+    "converted": "Converti",
+    "fetching": "Récupération des taux de change en direct...",
+    "updated": "Taux du marché mis à jour le :",
+    "request": "Besoin d'une autre devise ? Demandez-la ici.",
+    "article_title1": "Comprendre les taux de change",
+    "article_p1": "Les taux de change dictent la valeur d'une devise par rapport à une autre. Que vous évaluiez des produits internationaux, achetiez des matières premières ou budgétisiez des vacances, une conversion précise est vitale.",
+    "article_p2": "Lors de l'utilisation d'un convertisseur, vous voyez généralement le taux « interbancaire ». Le suivi quotidien de ces taux vous aide à prévoir les coûts futurs et à maintenir vos marges bénéficiaires."
+  },
+  "qr_app": {
+    "label": "Votre lien ou texte",
+    "placeholder": "Entrez l'URL, le texte ou les détails Wi-Fi...",
+    "waiting": "En attente de saisie...",
+    "download": "Télécharger PNG"
+  },
+  "time_app": {
+    "local_time": "Heure locale",
+    "your_local": "Votre heure locale",
+    "zone": "Fuseau",
+    "sunrise": "Lever du soleil",
+    "sunset": "Coucher du soleil",
+    "compare": "Comparer les villes",
+    "search": "+ Rechercher une ville...",
+    "searching": "Recherche en cours...",
+    "empty": "Recherchez et ajoutez une ville pour comparer les fuseaux horaires.",
+    "article_title1": "Maîtriser les fuseaux horaires mondiaux",
+    "article_p1": "Que vous coordonniez une réunion à distance ou planifiiez un voyage, la gestion des décalages horaires peut être un casse-tête logistique.",
+    "article_title2": "Comment un convertisseur d'heure vous synchronise",
+    "article_p2": "Un convertisseur de fuseau horaire fiable élimine les incertitudes liées aux changements d'heure d'été et aux décalages UTC complexes."
+  },
+  "unit_app": {
+    "article_title1": "La fracture mondiale des mesures",
+    "article_p1": "Le monde fonctionne en grande partie sur deux systèmes distincts : le système métrique et le système impérial/américain.",
+    "article_title2": "Le système métrique : une révolution en base 10",
+    "article_p2": "Né de la Révolution française, le système métrique a été conçu pour être universel, logique et basé sur le monde naturel.",
+    "article_title3": "Les systèmes impérial et avoirdupois",
+    "article_p3": "Les systèmes impérial britannique et américain tirent leurs racines de l'Angleterre médiévale.",
+    "article_p4": "Lors de l'approvisionnement en matières premières à l'échelle mondiale, la précision de ces conversions est essentielle pour éviter les erreurs de calcul coûteuses."
+  }
