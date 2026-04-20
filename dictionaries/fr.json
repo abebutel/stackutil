@@ -47,9 +47,8 @@
     "article_p1": "À une époque où les attaques par force brute automatisées peuvent tester des milliards de combinaisons par seconde, une simple phrase ne suffit plus. Un mot de passe fort agit comme une ligne de défense pour votre vie privée.",
     "article_title2": "Qu'est-ce qui rend un mot de passe vraiment sécurisé ?",
     "article_p2": "Les experts recommandent des mots de passe d'au moins 14 caractères incluant un mélange aléatoire. En utilisant un générateur aléatoire, vous créez une chaîne cryptographique mathématiquement difficile à pirater."
-  }
-},
-"currency_app": {
+  },
+  "currency_app": {
     "amount": "Montant",
     "converted": "Converti",
     "fetching": "Récupération des taux de change en direct...",
@@ -89,3 +88,4 @@
     "article_p3": "Les systèmes impérial britannique et américain tirent leurs racines de l'Angleterre médiévale.",
     "article_p4": "Lors de l'approvisionnement en matières premières à l'échelle mondiale, la précision de ces conversions est essentielle pour éviter les erreurs de calcul coûteuses."
   }
+}

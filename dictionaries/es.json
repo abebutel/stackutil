@@ -47,8 +47,7 @@
     "article_p1": "En una era donde los ataques de fuerza bruta pueden probar miles de millones de combinaciones por segundo, una frase simple ya no es suficiente. Una contraseña segura es la primera línea de defensa para su privacidad.",
     "article_title2": "¿Qué hace que una contraseña sea segura?",
     "article_p2": "Los expertos recomiendan contraseñas de al menos 14 caracteres con una mezcla aleatoria. Al usar un generador, se elimina el sesgo humano y se crea una cadena criptográfica matemáticamente difícil de descifrar."
-  }
-},
+  },
 "currency_app": {
     "amount": "Cantidad",
     "converted": "Convertido",
