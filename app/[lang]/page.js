@@ -6,24 +6,6 @@ import { usePathname } from 'next/navigation';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import { getDictionary } from '../getDictionary';
 
-export async function generateMetadata({ params }) {
-  const resolvedParams = await params;
-  const lang = resolvedParams.lang || 'en';
-
-  return {
-    alternates: {
-      canonical: `/${lang}`,
-      languages: {
-        'en': '/en',
-        'es': '/es',
-        'fr': '/fr',
-        'he': '/he',
-        'x-default': '/en', // Fallback for unmatched languages
-      },
-    },
-  };
-}
-
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [dict, setDict] = useState(null);

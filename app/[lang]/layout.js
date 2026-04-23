@@ -4,11 +4,27 @@ import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  metadataBase: new URL('https://stackutil.com'), // <-- ADDED THIS
-  title: "StackUtil | Your go to FREE online tools hub",
-  description: "Your go to FREE online tools hub",
-};
+// THIS HANDLES THE HOMEPAGE SEO
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const lang = resolvedParams.lang || 'en';
+
+  return {
+    metadataBase: new URL('https://stackutil.com'),
+    title: "StackUtil | Your go to FREE online tools hub",
+    description: "Your go to FREE online tools hub",
+    alternates: {
+      canonical: `/${lang}`,
+      languages: {
+        'en': '/en',
+        'es': '/es',
+        'fr': '/fr',
+        'he': '/he',
+        'x-default': '/en',
+      },
+    },
+  };
+}
 
 export default async function RootLayout({ children, params }) {
   const resolvedParams = await params;
