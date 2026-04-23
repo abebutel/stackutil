@@ -1,16 +1,15 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "../globals.css";
-import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
+  metadataBase: new URL('https://stackutil.com'), // <-- ADDED THIS
   title: "StackUtil | Your go to FREE online tools hub",
   description: "Your go to FREE online tools hub",
 };
 
-// Add 'async' here and await the params
 export default async function RootLayout({ children, params }) {
   const resolvedParams = await params;
   const lang = resolvedParams.lang || 'en';
@@ -25,7 +24,7 @@ export default async function RootLayout({ children, params }) {
           strategy="beforeInteractive" 
         />
       </head>
-      <body className={inter.className}>{children} <Analytics /></body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
