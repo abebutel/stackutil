@@ -199,11 +199,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto mb-6">
           StackUtil is a comprehensive digital toolkit designed to streamline your daily tasks. From securing your online presence to calculating complex global time zone differences, our goal is to provide fast, reliable, and free utilities.
         </div>
-        <div className="flex justify-center space-x-6">
-          <Link href={`/${lang}/privacy`} className="hover:text-blue-600">Privacy Policy</Link>
-          <Link href={`/${lang}/terms`} className="hover:text-blue-600">Terms of Service</Link>
-          <Link href={`/${lang}/contact`} className="hover:text-blue-600">Contact</Link>
-        </div>
+        
       </footer>
     </div>
   );
