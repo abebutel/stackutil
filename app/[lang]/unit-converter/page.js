@@ -183,17 +183,49 @@ export default function UnitConverter() {
         </div>
 
         <article className="prose prose-slate max-w-none bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mt-12">
+          
+          {/* Section 1: The Global Measurement Divide (Original Text) */}
           <h2 className="text-2xl md:text-3xl font-black mb-8 text-slate-800 border-b border-slate-100 pb-4">
-            {dict?.unit_app?.article_title || "Mastering Metric and Imperial Conversions"}
+            {dict?.unit_app?.article_title1 || "The Global Measurement Divide"}
           </h2>
 
           <div className="space-y-8">
+            <section>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.unit_app?.article_p1 || "The world largely operates on two distinct systems of measurement..."}
+              </p>
+            </section>
+
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.unit_app?.article_title2 || "The Metric System: A Base-10 Revolution"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.unit_app?.article_p2 || "Born out of the French Revolution in 1799..."}
+              </p>
+            </section>
+
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.unit_app?.article_title3 || "The Imperial and Avoirdupois Systems"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                {dict?.unit_app?.article_p3 || "The British Imperial and US Customary systems trace their roots back..."}
+              </p>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.unit_app?.article_p4 || "When sourcing raw materials globally, precision in these conversions is critical..."}
+              </p>
+            </section>
+
+            <div className="border-t border-slate-200 my-8"></div>
+
+            {/* Section 2: How-To and FAQ (New SEO Text) */}
             <section>
               <h3 className="text-xl font-bold mb-3 text-slate-800">
                 {dict?.unit_app?.how_to_title || "How to Use the Unit Converter"}
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                {dict?.unit_app?.how_to_text || "Select your desired category—such as length, weight, temperature, or volume—then enter the value you wish to convert. The tool instantly calculates the corresponding values across all other major measurement systems, making it perfect for cooking, engineering, or international travel."}
+                {dict?.unit_app?.how_to_text || "Select your desired category..."}
               </p>
             </section>
 
@@ -202,7 +234,7 @@ export default function UnitConverter() {
                 {dict?.unit_app?.system_differences_title || "Understanding Measurement Systems"}
               </h3>
               <p className="text-slate-600 leading-relaxed">
-                {dict?.unit_app?.system_differences_text || "While most of the world utilizes the metric system (meters, grams, Celsius), a few countries, including the United States, primarily rely on the Imperial system (inches, pounds, Fahrenheit). Having a reliable converter ensures total accuracy when following international recipes or reading global blueprints."}
+                {dict?.unit_app?.system_differences_text || "While most of the world utilizes the metric system..."}
               </p>
             </section>
 
@@ -214,7 +246,7 @@ export default function UnitConverter() {
                 {dict?.unit_app?.faq_q1 || "Are the conversion calculations exact?"}
               </h4>
               <p className="text-slate-600 leading-relaxed text-sm">
-                {dict?.unit_app?.faq_a1 || "Yes. The mathematical formulas used in this tool provide high-precision, standardized calculations. For general usability, the outputs are formatted to avoid excessively long decimal strings, giving you the perfect balance of accuracy and readability."}
+                {dict?.unit_app?.faq_a1 || "Yes. The mathematical formulas used in this tool provide high-precision..."}
               </p>
             </section>
           </div>
