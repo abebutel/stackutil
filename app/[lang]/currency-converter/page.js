@@ -186,10 +186,42 @@ export default function CurrencyConverter() {
           </div>
         </div>
 
-        <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-          <h2 className="text-2xl font-bold mb-4 text-slate-800">{dict?.currency_app?.article_title1 || "Understanding Exchange Rates"}</h2>
-          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.currency_app?.article_p1 || "Exchange rates dictate the value of one currency against another, fluctuating constantly based on global economics, inflation rates, and geopolitical events. Whether you are pricing international goods, buying raw materials overseas, or budgeting a vacation, accurate currency conversion is vital."}</p>
-          <p className="text-slate-600 leading-relaxed">{dict?.currency_app?.article_p2 || "When using a currency converter, you are typically seeing the \"interbank\" rate—the rate banks use when trading with each other. Consumer rates at airports or credit card processors will often include a slight markup. Tracking these market rates daily helps you forecast future costs for global transactions and maintain healthy profit margins."}</p>
+        <article className="prose prose-slate max-w-none bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mt-12">
+          <h2 className="text-2xl md:text-3xl font-black mb-8 text-slate-800 border-b border-slate-100 pb-4">
+            {dict?.currency_app?.article_title || "Understanding Global Exchange Rates"}
+          </h2>
+
+          <div className="space-y-8">
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.currency_app?.how_to_title || "How to Use the Currency Converter"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.currency_app?.how_to_text || "Simply select your base currency, enter the amount you wish to convert, and choose your target currency. Our tool instantly calculates the conversion so you can plan your budget, travel, or international purchases with confidence."}
+              </p>
+            </section>
+
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.currency_app?.data_source_title || "Where Do Our Rates Come From?"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.currency_app?.data_source_text || "We utilize industry-leading financial APIs to pull reliable exchange rates. To keep StackUtil completely free and lightning fast, our rates are cached and updated every 24 hours, giving you an excellent baseline for everyday financial planning."}
+              </p>
+            </section>
+
+            <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <h3 className="text-xl font-bold mb-4 text-slate-800 flex items-center gap-2">
+                <span>💡</span> {dict?.currency_app?.faq_title || "Frequently Asked Questions"}
+              </h3>
+              <h4 className="text-lg font-semibold text-slate-700 mb-2">
+                {dict?.currency_app?.faq_q1 || "Are these rates exact for bank transfers?"}
+              </h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                {dict?.currency_app?.faq_a1 || "Not always. Banks, PayPal, and credit card companies often apply their own markup or foreign transaction fees. The rates shown here are mid-market rates, which reflect the truest baseline value of the currency before institutional fees are added."}
+              </p>
+            </section>
+          </div>
         </article>
       </main>
     </div>

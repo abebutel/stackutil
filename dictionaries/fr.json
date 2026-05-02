@@ -63,16 +63,22 @@
     "article_title2": "Qu'est-ce qui rend un mot de passe vraiment sécurisé ?",
     "article_p2": "Les experts recommandent des mots de passe d'au moins 14 caractères incluant un mélange aléatoire. En utilisant un générateur aléatoire, vous créez une chaîne cryptographique mathématiquement difficile à pirater."
   },
-  "currency_app": {
+   "currency_app": {
+    "title": "Convertisseur de devises",
     "amount": "Montant",
-    "converted": "Converti",
-    "fetching": "Récupération des taux de change en direct...",
-    "updated": "Taux du marché mis à jour le :",
-    "request": "Besoin d'une autre devise ? Demandez-la ici.",
-    "article_title1": "Comprendre les taux de change",
-    "article_p1": "Les taux de change dictent la valeur d'une devise par rapport à une autre. Que vous évaluiez des produits internationaux, achetiez des matières premières ou budgétisiez des vacances, une conversion précise est vitale.",
-    "article_p2": "Lors de l'utilisation d'un convertisseur, vous voyez généralement le taux « interbancaire ». Le suivi quotidien de ces taux vous aide à prévoir les coûts futurs et à maintenir vos marges bénéficiaires."
-  },
+    "from": "De",
+    "to": "À",
+    "converted": "Montant converti",
+    "error": "Erreur lors de la récupération des taux.",
+    "article_title": "Comprendre les taux de change mondiaux",
+    "how_to_title": "Comment utiliser le convertisseur de devises",
+    "how_to_text": "Sélectionnez simplement votre devise de base, saisissez le montant que vous souhaitez convertir et choisissez votre devise cible. Notre outil calcule instantanément la conversion afin que vous puissiez planifier votre budget, vos voyages ou vos achats internationaux en toute confiance.",
+    "data_source_title": "D'où proviennent nos taux ?",
+    "data_source_text": "Nous utilisons des API financières leaders du secteur pour obtenir des taux de change fiables. Pour garder StackUtil entièrement gratuit et ultra-rapide, nos taux sont mis en cache et mis à jour toutes les 24 heures, vous offrant une excellente base pour la planification financière quotidienne.",
+    "faq_title": "Questions fréquemment posées",
+    "faq_q1": "Ces taux sont-ils exacts pour les virements bancaires ?",
+    "faq_a1": "Pas toujours. Les banques, PayPal et les sociétés de cartes de crédit appliquent souvent leur propre majoration ou des frais de transaction à l'étranger. Les taux affichés ici sont des taux interbancaires (mid-market), qui reflètent la valeur de référence la plus fidèle de la devise avant l'ajout de frais institutionnels."
+ },
   "qr_app": {
     "label": "Votre lien ou texte",
     "placeholder": "Entrez l'URL, le texte ou les détails Wi-Fi...",

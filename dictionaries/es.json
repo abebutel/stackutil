@@ -63,16 +63,22 @@
     "article_title2": "¿Qué hace que una contraseña sea segura?",
     "article_p2": "Los expertos recomiendan contraseñas de al menos 14 caracteres con una mezcla aleatoria. Al usar un generador, se elimina el sesgo humano y se crea una cadena criptográfica matemáticamente difícil de descifrar."
   },
-"currency_app": {
+  "currency_app": {
+    "title": "Convertidor de Moneda",
     "amount": "Cantidad",
-    "converted": "Convertido",
-    "fetching": "Obteniendo tipos de cambio en vivo...",
-    "updated": "Tipos de mercado actualizados:",
-    "request": "¿Necesita otra moneda? Solicítela aquí.",
-    "article_title1": "Entendiendo los Tipos de Cambio",
-    "article_p1": "Los tipos de cambio dictan el valor de una moneda frente a otra. Ya sea que esté fijando precios de bienes internacionales, comprando materias primas o presupuestando unas vacaciones, la conversión precisa es vital.",
-    "article_p2": "Al usar un conversor de divisas, generalmente ve la tasa \"interbancaria\". El seguimiento diario de estas tasas le ayuda a pronosticar costos futuros y mantener márgenes de beneficio saludables."
-  },
+    "from": "De",
+    "to": "A",
+    "converted": "Cantidad Convertida",
+    "error": "Error al obtener las tasas.",
+    "article_title": "Entendiendo las Tasas de Cambio Globales",
+    "how_to_title": "Cómo Usar el Convertidor de Moneda",
+    "how_to_text": "Simplemente seleccione su moneda base, introduzca la cantidad que desea convertir y elija su moneda de destino. Nuestra herramienta calcula la conversión al instante para que pueda planificar su presupuesto, viaje o compras internacionales con confianza.",
+    "data_source_title": "¿De Dónde Provienen Nuestras Tasas?",
+    "data_source_text": "Utilizamos APIs financieras líderes en la industria para obtener tasas de cambio fiables. Para mantener StackUtil totalmente gratuito y rapidísimo, nuestras tasas se almacenan en caché y se actualizan cada 24 horas, ofreciéndole una base excelente para la planificación financiera diaria.",
+    "faq_title": "Preguntas Frecuentes",
+    "faq_q1": "¿Son estas tasas exactas para transferencias bancarias?",
+    "faq_a1": "No siempre. Los bancos, PayPal y las compañías de tarjetas de crédito a menudo aplican su propio margen o comisiones por transacciones en el extranjero. Las tasas mostradas aquí son tasas interbancarias (mid-market), que reflejan el valor base más fiel de la moneda antes de que se añadan comisiones institucionales."
+ },
   "qr_app": {
     "label": "Tu enlace o texto",
     "placeholder": "Ingresa URL, texto o detalles de Wi-Fi...",

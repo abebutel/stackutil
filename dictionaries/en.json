@@ -64,14 +64,20 @@
     "article_p2": "Experts recommend passwords that are at least 14 characters long and include a random mix of characters. By using a random generator, you eliminate human bias and create a cryptographic string that is mathematically difficult to crack."
   },
 "currency_app": {
+    "title": "Currency Converter",
     "amount": "Amount",
-    "converted": "Converted",
-    "fetching": "Fetching live exchange rates...",
-    "updated": "Market rates last updated:",
-    "request": "Need another currency? Request it here.",
-    "article_title1": "Understanding Exchange Rates",
-    "article_p1": "Exchange rates dictate the value of one currency against another, fluctuating constantly based on global economics, inflation rates, and geopolitical events. Whether you are pricing international goods, buying raw materials overseas, or budgeting a vacation, accurate currency conversion is vital.",
-    "article_p2": "When using a currency converter, you are typically seeing the \"interbank\" rate—the rate banks use when trading with each other. Consumer rates at airports or credit card processors will often include a slight markup. Tracking these market rates daily helps you forecast future costs for global transactions and maintain healthy profit margins."
+    "from": "From",
+    "to": "To",
+    "converted": "Converted Amount",
+    "error": "Error fetching rates.",
+    "article_title": "Understanding Global Exchange Rates",
+    "how_to_title": "How to Use the Currency Converter",
+    "how_to_text": "Simply select your base currency, enter the amount you wish to convert, and choose your target currency. Our tool instantly calculates the conversion so you can plan your budget, travel, or international purchases with confidence.",
+    "data_source_title": "Where Do Our Rates Come From?",
+    "data_source_text": "We utilize industry-leading financial APIs to pull reliable exchange rates. To keep StackUtil completely free and lightning fast, our rates are cached and updated every 24 hours, giving you an excellent baseline for everyday financial planning.",
+    "faq_title": "Frequently Asked Questions",
+    "faq_q1": "Are these rates exact for bank transfers?",
+    "faq_a1": "Not always. Banks, PayPal, and credit card companies often apply their own markup or foreign transaction fees. The rates shown here are mid-market rates, which reflect the truest baseline value of the currency before institutional fees are added."
   },
   "qr_app": {
     "label": "Your Link or Text",
