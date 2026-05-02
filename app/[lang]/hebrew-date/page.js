@@ -196,11 +196,52 @@ export default function HebrewDate() {
           <p className="text-xs text-slate-400 mt-4 text-center">{dict?.hebrew_app?.sunset_warning || "* Note: Hebrew dates begin at sunset the night before."}</p>
         </div>
 
-        <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-          <h2 className="text-2xl font-bold mb-4 text-slate-800">{dict?.hebrew_app?.article_title1 || "Understanding the Lunisolar Calendar"}</h2>
-          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.hebrew_app?.article_p1 || "Unlike the Gregorian calendar, which is strictly solar (based on the Earth's revolution around the sun), the Hebrew calendar is 'lunisolar'. This means the months are based on the phases of the moon, while the years are synchronized with the solar seasons."}</p>
-          <h3 className="text-xl font-bold mb-3 mt-8 text-slate-800">{dict?.hebrew_app?.article_title2 || "The 19-Year Leap Cycle"}</h3>
-          <p className="text-slate-600 leading-relaxed">{dict?.hebrew_app?.article_p2 || "A purely lunar year is about 354 days long, falling 11 days short of the solar year. Without adjustment, holidays like Passover (a spring festival) would drift into winter. To prevent this, the Hebrew calendar uses a 19-year cycle where an entire 'leap month' (Adar I) is added 7 times during the cycle, keeping the calendar perfectly aligned with the seasons."}</p>
+        <article className="prose prose-slate max-w-none bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mt-12">
+          
+          {/* Section 1: The Lunisolar Calendar (Your Original Text) */}
+          <div className="space-y-8">
+            <section>
+              <h2 className="text-xl md:text-2xl font-black mb-3 text-slate-800">
+                {dict?.hebrew_app?.article_title1 || "Understanding the Lunisolar Calendar"}
+              </h2>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.hebrew_app?.article_p1 || "Unlike the Gregorian calendar, which is strictly solar (based on the Earth's revolution around the sun), the Hebrew calendar is 'lunisolar'. This means the months are based on the phases of the moon, while the years are synchronized with the solar seasons."}
+              </p>
+            </section>
+
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.hebrew_app?.article_title2 || "The 19-Year Leap Cycle"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.hebrew_app?.article_p2 || "A purely lunar year is about 354 days long, falling 11 days short of the solar year. Without adjustment, holidays like Passover (a spring festival) would drift into winter. To prevent this, the Hebrew calendar uses a 19-year cycle where an entire 'leap month' (Adar I) is added 7 times during the cycle, keeping the calendar perfectly aligned with the seasons."}
+              </p>
+            </section>
+
+            <div className="border-t border-slate-200 my-8"></div>
+
+            {/* Section 2: How-To and FAQ (New SEO Text) */}
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.hebrew_app?.how_to_title || "How to Use the Hebrew Date Converter"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.hebrew_app?.how_to_text || "Simply select a standard Gregorian date from the calendar to instantly see its Hebrew equivalent, or vice versa. This tool is perfect for calculating Jewish holidays, finding Bar and Bat Mitzvah portions, or determining the exact date for observing a Yahrzeit (memorial anniversary)."}
+              </p>
+            </section>
+
+            <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <h3 className="text-xl font-bold mb-4 text-slate-800 flex items-center gap-2">
+                <span>💡</span> {dict?.hebrew_app?.faq_title || "Frequently Asked Questions"}
+              </h3>
+              <h4 className="text-lg font-semibold text-slate-700 mb-2">
+                {dict?.hebrew_app?.faq_q1 || "When does the Hebrew day actually begin?"}
+              </h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                {dict?.hebrew_app?.faq_a1 || "Unlike the Gregorian calendar, which rolls over at midnight, a Jewish 'day' begins at sunset. If an event occurs after dark, it is officially recorded as occurring on the following day's Hebrew date."}
+              </p>
+            </section>
+          </div>
         </article>
       </main>
     </div>

@@ -154,6 +154,11 @@
     "article_p1": "A diferencia del calendario gregoriano (estrictamente solar), el calendario hebreo es 'lunisolar'. Los meses se basan en las fases de la luna, mientras que los años se sincronizan con las estaciones solares.",
     "article_title2": "El ciclo bisiesto de 19 años",
     "article_p2": "Un año lunar puro tiene unos 354 días. Sin ajuste, festividades como la Pascua (primavera) se desplazarían al invierno. Para evitarlo, el calendario hebreo añade un 'mes bisiesto' (Adar I) 7 veces en un ciclo de 19 años.",
+     "how_to_title": "Cómo usar el convertidor de fecha hebrea",
+  "how_to_text": "Simplemente seleccione una fecha gregoriana desde el calendario para ver al instante su equivalente hebreo, o viceversa. Esta herramienta es perfecta para calcular las festividades judías, encontrar las porciones de Bar y Bat Mitzvá, o determinar la fecha exacta para observar un Yahrzeit (aniversario conmemorativo).",
+  "faq_title": "Preguntas frecuentes",
+  "faq_q1": "¿Cuándo comienza realmente el día hebreo?",
+  "faq_a1": "A diferencia del calendario gregoriano, que cambia a la medianoche, un 'día' judío comienza al atardecer. Si un evento ocurre después del anochecer, se registra oficialmente con la fecha hebrea del día siguiente.",
     "greg_months": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
     "heb_months": ["Nisán", "Iyar", "Siván", "Tamuz", "Av", "Elul", "Tishrei", "Jeshván", "Kislev", "Tevet", "Shvat", "Adar I", "Adar II", "Adar"]
   },

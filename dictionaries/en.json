@@ -130,8 +130,7 @@
     "faq_a1": "Yes. The mathematical formulas used in this tool provide high-precision, standardized calculations. For general usability, the outputs are formatted to avoid excessively long decimal strings, giving you the perfect balance of accuracy and readability.",
     "categories": {
       "Length": "Length", "Weight": "Weight", "Area": "Area", "Volume": "Volume", "Temperature": "Temperature"
-    }
-  },
+    }, 
     "units": {
       "Meter": "Meter", "Kilometer": "Kilometer", "Centimeter": "Centimeter", "Millimeter": "Millimeter", "Mile": "Mile", "Yard": "Yard", "Foot": "Foot", "Inch": "Inch",
       "Gram": "Gram", "Kilogram": "Kilogram", "Milligram": "Milligram", "Metric Ton": "Metric Ton", "Pound": "Pound", "Ounce": "Ounce", "Troy Ounce": "Troy Ounce",
@@ -155,6 +154,11 @@
     "article_p1": "Unlike the Gregorian calendar, which is strictly solar (based on the Earth's revolution around the sun), the Hebrew calendar is 'lunisolar'. This means the months are based on the phases of the moon, while the years are synchronized with the solar seasons.",
     "article_title2": "The 19-Year Leap Cycle",
     "article_p2": "A purely lunar year is about 354 days long, falling 11 days short of the solar year. Without adjustment, holidays like Passover (a spring festival) would drift into winter. To prevent this, the Hebrew calendar uses a 19-year cycle where an entire 'leap month' (Adar I) is added 7 times during the cycle, keeping the calendar perfectly aligned with the seasons.",
+    "how_to_title": "How to Use the Hebrew Date Converter",
+    "how_to_text": "Simply select a standard Gregorian date from the calendar to instantly see its Hebrew equivalent, or vice versa. This tool is perfect for calculating Jewish holidays, finding Bar and Bat Mitzvah portions, or determining the exact date for observing a Yahrzeit (memorial anniversary).",
+    "faq_title": "Frequently Asked Questions",
+    "faq_q1": "When does the Hebrew day actually begin?",
+    "faq_a1": "Unlike the Gregorian calendar, which rolls over at midnight, a Jewish 'day' begins at sunset. If an event occurs after dark, it is officially recorded as occurring on the following day's Hebrew date.",
     "greg_months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
     "heb_months": ["Nisan", "Iyyar", "Sivan", "Tamuz", "Av", "Elul", "Tishrei", "Cheshvan", "Kislev", "Tevet", "Sh'vat", "Adar I", "Adar II", "Adar"]
   },
