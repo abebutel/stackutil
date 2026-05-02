@@ -1,24 +1,22 @@
 import Link from 'next/link';
 
-export default function Contact() {
+export default async function Contact({ params }) {
+  const resolvedParams = await params;
+  const lang = resolvedParams.lang || 'en';
+
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6">
-      <div className="max-w-md w-full bg-white rounded-3xl shadow-sm border border-slate-200 p-10 text-center">
-        <div className="text-4xl mb-4">📧</div>
-        <h1 className="text-2xl font-bold mb-4">Get in Touch</h1>
-        <p className="text-slate-600 mb-8">
-          Have a suggestion for a new tool or need another currency added to our converter? We'd love to hear from you.
-        </p>
-        <a 
-          href="mailto:iluvthissite@gmail.com" 
-          className="inline-block w-full py-4 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-200"
-        >
-          Email support@stackutil.com
-        </a>
-        <div className="mt-8">
-          <Link href="/" className="text-sm text-slate-400 hover:text-blue-600 transition-colors">
-            ← Back to StackUtil
-          </Link>
+    <div className="min-h-screen bg-slate-50 py-16 px-6">
+      <div className="max-w-3xl mx-auto bg-white p-10 rounded-2xl shadow-sm border border-slate-200">
+        <Link href={`/${lang}`} className="text-blue-600 font-bold mb-8 inline-block hover:underline">&larr; Back to Tools</Link>
+        <h1 className="text-3xl font-black text-slate-800 mb-6">Contact Us</h1>
+        <div className="prose prose-slate max-w-none text-slate-600 leading-relaxed space-y-4">
+          <p>We would love to hear from you. Whether you have a question about one of our tools, a suggestion for a new feature, or need to report a bug, your feedback helps make StackUtil better.</p>
+          <div className="mt-8 p-6 bg-slate-50 border border-slate-200 rounded-xl text-center">
+            <h3 className="text-lg font-bold text-slate-800 mb-2">Get in Touch</h3>
+            <p className="text-slate-600 mb-4">You can reach our support team directly via email:</p>
+            <a href="mailto:support@stackutil.com" className="text-xl font-black text-blue-600 hover:text-blue-800">support@stackutil.com</a>
+          </div>
+          <p className="text-sm text-slate-400 text-center mt-8">Please allow 24-48 hours for a response to general inquiries.</p>
         </div>
       </div>
     </div>
