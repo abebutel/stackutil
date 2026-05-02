@@ -143,7 +143,9 @@ export default function QRGenerator() {
               {dict?.qr_app?.download || "Download PNG"}
             </button>
           </div>
-          <article className="prose prose-slate max-w-none bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mt-12">
+         </div>
+      </main>
+      <article className="prose prose-slate max-w-none bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mt-12">
           <h2 className="text-2xl md:text-3xl font-black mb-8 text-slate-800 border-b border-slate-100 pb-4">
             {dict?.qr_app?.article_title || "The Power of Custom QR Codes"}
           </h2>
@@ -180,8 +182,6 @@ export default function QRGenerator() {
             </section>
           </div>
         </article>
-        </div>
-      </main>
     </div>
   );
 }
