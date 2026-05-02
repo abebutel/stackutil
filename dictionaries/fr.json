@@ -83,7 +83,15 @@
     "label": "Votre lien ou texte",
     "placeholder": "Entrez l'URL, le texte ou les détails Wi-Fi...",
     "waiting": "En attente de saisie...",
-    "download": "Télécharger PNG"
+    "download": "Télécharger PNG",
+  "article_title": "Le pouvoir des codes QR personnalisés",
+  "how_to_title": "Comment créer votre code QR",
+  "how_to_text": "Saisissez une URL de site web, du texte brut ou des informations de contact dans le champ ci‑dessus. L'outil générera instantanément un code QR haute résolution que vous pourrez télécharger et imprimer pour des menus de restaurant, des cartes de visite ou des supports marketing.",
+  "best_practices_title": "Bonnes pratiques pour la lecture",
+  "best_practices_text": "Pour une meilleure expérience utilisateur, assurez‑vous que le code QR téléchargé présente un fort contraste (par exemple modules noirs sur fond blanc) et soit imprimé en taille suffisante pour être facilement lu par les caméras des appareils mobiles.",
+  "faq_title": "Questions fréquemment posées",
+  "faq_q1": "Ces codes QR expirent‑ils un jour ?",
+  "faq_a1": "Non ! Les codes QR générés par StackUtil sont « statiques ». Cela signifie que l'URL ou les données textuelles sont encodées directement dans le motif géométrique. Tant que l'URL que vous avez saisie reste active, le code QR fonctionnera indéfiniment sans frais d'abonnement."
   },
   "time_app": {
     "local_time": "Heure locale",
