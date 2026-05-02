@@ -161,4 +161,11 @@
     "article_title2": "Pourquoi les tailles varient-elles ?",
     "article_p2": "Les différentes régions ont développé leurs normes de manière indépendante. Les tailles américaines et britanniques s'appuient sur le système impérial, tandis que les tailles européennes et japonaises utilisent le système métrique."
   }
+  ,"home_seo": {
+    "hero_subtitle": "Votre boîte à outils numérique complète",
+    "hero_desc": "StackUtil fournit des utilitaires en ligne rapides, fiables et gratuits pour simplifier vos tâches quotidiennes. De la sécurisation de votre présence en ligne au calcul de différences complexes de fuseaux horaires mondiaux, tout fonctionne instantanément dans votre navigateur.",
+    "seo_title": "Pourquoi choisir StackUtil ?",
+    "seo_p1": "Dans le monde numérique effréné d'aujourd'hui, trouver un outil de conversion rapide ou une calculatrice signifie souvent naviguer dans un labyrinthe de pop-ups et de sites surchargés. StackUtil est différent. Nous avons construit un hub propre et sans friction d'outils quotidiens qui traitent vos données de manière sécurisée et instantanée.",
+    "seo_p2": "Que vous soyez développeur ayant besoin d'un mot de passe solide, voyageur vérifiant les taux de change, ou étudiant convertissant des unités métriques, nos outils sont conçus pour fonctionner de manière fluide sur tous vos appareils. Comme nous utilisons le traitement côté client pour la plupart de nos utilitaires, vos données privées ne quittent même pas votre écran."
+  }
 }

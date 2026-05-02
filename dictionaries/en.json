@@ -161,4 +161,11 @@
     "article_title2": "Why Sizes Vary",
     "article_p2": "Different regions developed their sizing standards independently. US and UK sizes historically rely on inches and the Imperial system, while EU and JP sizes rely on centimeters and the metric system. Always double-check specific brand sizing charts, as 'vanity sizing' can cause variations even within the same country!"
   }
+  ,"home_seo": {
+    "hero_subtitle": "Your Comprehensive Digital Toolkit",
+    "hero_desc": "StackUtil provides fast, reliable, and free online utilities to streamline your daily tasks. From securing your online presence to calculating complex global time zone differences, everything runs instantly right in your browser.",
+    "seo_title": "Why Choose StackUtil?",
+    "seo_p1": "In today's fast-paced digital world, finding a quick conversion tool or calculator usually means navigating through a maze of pop-ups and bloated websites. StackUtil is different. We built a clean, friction-free hub of everyday tools that process your data securely and instantly.",
+    "seo_p2": "Whether you are a developer needing a strong password, a traveler checking exchange rates, or a student converting metric units, our tools are designed to work seamlessly across all your devices. Because we utilize client-side processing for most of our utilities, your private data never even leaves your screen."
+  }
 }

@@ -161,4 +161,11 @@
     "article_title2": "¿Por qué varían las tallas?",
     "article_p2": "Diferentes regiones desarrollaron sus estándares de forma independiente. Las tallas de EE. UU. y el Reino Unido se basan en el sistema imperial, mientras que las de la UE y Japón usan el sistema métrico."
   }
+  ,"home_seo": {
+    "hero_subtitle": "Tu kit de herramientas digitales integral",
+    "hero_desc": "StackUtil ofrece utilidades en línea rápidas, fiables y gratuitas para optimizar tus tareas diarias. Desde asegurar tu presencia en línea hasta calcular complejas diferencias de zonas horarias globales, todo funciona al instante en tu navegador.",
+    "seo_title": "¿Por qué elegir StackUtil?",
+    "seo_p1": "En el vertiginoso mundo digital de hoy, encontrar una herramienta de conversión rápida o una calculadora suele significar navegar por un laberinto de ventanas emergentes y sitios hinchados. StackUtil es diferente. Construimos un centro limpio y sin fricciones de herramientas cotidianas que procesan tus datos de forma segura e instantánea.",
+    "seo_p2": "Ya seas un desarrollador que necesita una contraseña robusta, un viajero verificando tipos de cambio o un estudiante convirtiendo unidades métricas, nuestras herramientas están diseñadas para funcionar sin problemas en todos tus dispositivos. Como utilizamos procesamiento del lado del cliente en la mayoría de nuestras utilidades, tus datos privados ni siquiera salen de tu pantalla."
+  }
 }
