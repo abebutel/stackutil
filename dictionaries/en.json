@@ -130,7 +130,8 @@
     "faq_a1": "Yes. The mathematical formulas used in this tool provide high-precision, standardized calculations. For general usability, the outputs are formatted to avoid excessively long decimal strings, giving you the perfect balance of accuracy and readability.",
     "categories": {
       "Length": "Length", "Weight": "Weight", "Area": "Area", "Volume": "Volume", "Temperature": "Temperature"
-    },
+    }
+  },
     "units": {
       "Meter": "Meter", "Kilometer": "Kilometer", "Centimeter": "Centimeter", "Millimeter": "Millimeter", "Mile": "Mile", "Yard": "Yard", "Foot": "Foot", "Inch": "Inch",
       "Gram": "Gram", "Kilogram": "Kilogram", "Milligram": "Milligram", "Metric Ton": "Metric Ton", "Pound": "Pound", "Ounce": "Ounce", "Troy Ounce": "Troy Ounce",
