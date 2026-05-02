@@ -120,6 +120,14 @@
     "article_title3": "Les systèmes impérial et avoirdupois",
     "article_p3": "Les systèmes impérial britannique et américain tirent leurs racines de l'Angleterre médiévale.",
     "article_p4": "Lors de l'approvisionnement en matières premières à l'échelle mondiale, la précision de ces conversions est essentielle pour éviter les erreurs de calcul coûteuses.",
+      "article_title": "Maîtriser les conversions métriques et impériales",
+  "how_to_title": "Comment utiliser le convertisseur d'unités",
+  "how_to_text": "Sélectionnez la catégorie souhaitée — par exemple longueur, masse, température ou volume — puis saisissez la valeur que vous souhaitez convertir. L'outil calcule instantanément les valeurs correspondantes dans tous les autres principaux systèmes de mesure, le rendant parfait pour la cuisine, l'ingénierie ou les voyages internationaux.",
+  "system_differences_title": "Comprendre les systèmes de mesure",
+  "system_differences_text": "Alors que la majeure partie du monde utilise le système métrique (mètres, grammes, Celsius), quelques pays, dont les États‑Unis, s'appuient principalement sur le système impérial (pouces, livres, Fahrenheit). Disposer d'un convertisseur fiable garantit une précision totale lors du suivi de recettes internationales ou de la lecture de plans mondiaux.",
+  "faq_title": "Questions fréquemment posées",
+  "faq_q1": "Les calculs de conversion sont-ils exacts ?",
+  "faq_a1": "Oui. Les formules mathématiques utilisées par cet outil fournissent des calculs standardisés à haute précision. Pour une utilisation générale, les résultats sont formatés afin d'éviter des chaînes décimales excessivement longues, offrant ainsi un parfait équilibre entre précision et lisibilité.",
     "categories": {
       "Length": "Longueur", "Weight": "Poids", "Area": "Surface", "Volume": "Volume", "Temperature": "Température"
     },

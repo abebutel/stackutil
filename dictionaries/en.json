@@ -120,6 +120,14 @@
     "article_title3": "The Imperial and Avoirdupois Systems",
     "article_p3": "The British Imperial and US Customary systems trace their roots back to medieval England, where measurements were based on physical artifacts, agriculture, and the human body. An inch was three grains of barley placed end-to-end, and a foot was exactly that—the length of a human foot.",
     "article_p4": "When sourcing raw materials globally, precision in these conversions is critical. A manufacturer buying sterling silver or precious metals, for example, must constantly navigate the difference between the standard Avoirdupois ounce (28.34 grams) and the Troy ounce (31.10 grams) used strictly for precious metals. A miscalculation in units can severely impact yield targets and bottom-line profit margins.",
+    "article_title": "Mastering Metric and Imperial Conversions",
+    "how_to_title": "How to Use the Unit Converter",
+    "how_to_text": "Select your desired category—such as length, weight, temperature, or volume—then enter the value you wish to convert. The tool instantly calculates the corresponding values across all other major measurement systems, making it perfect for cooking, engineering, or international travel.",
+    "system_differences_title": "Understanding Measurement Systems",
+    "system_differences_text": "While most of the world utilizes the metric system (meters, grams, Celsius), a few countries, including the United States, primarily rely on the Imperial system (inches, pounds, Fahrenheit). Having a reliable converter ensures total accuracy when following international recipes or reading global blueprints.",
+    "faq_title": "Frequently Asked Questions",
+    "faq_q1": "Are the conversion calculations exact?",
+    "faq_a1": "Yes. The mathematical formulas used in this tool provide high-precision, standardized calculations. For general usability, the outputs are formatted to avoid excessively long decimal strings, giving you the perfect balance of accuracy and readability.",
     "categories": {
       "Length": "Length", "Weight": "Weight", "Area": "Area", "Volume": "Volume", "Temperature": "Temperature"
     },

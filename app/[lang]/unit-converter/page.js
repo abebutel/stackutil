@@ -182,14 +182,42 @@ export default function UnitConverter() {
           </div>
         </div>
 
-        <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-          <h2 className="text-2xl font-bold mb-4 text-slate-800">{dict?.unit_app?.article_title1 || "The Global Measurement Divide"}</h2>
-          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.unit_app?.article_p1 || "The world largely operates on two distinct systems of measurement: the Metric system (International System of Units, or SI) and the Imperial/US Customary systems. Understanding the conversion between these standards is essential for everything from baking a cake to international logistics and engineering."}</p>
-          <h3 className="text-xl font-bold mb-3 mt-8 text-slate-800">{dict?.unit_app?.article_title2 || "The Metric System: A Base-10 Revolution"}</h3>
-          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.unit_app?.article_p2 || "Born out of the French Revolution in 1799, the metric system was designed to be universal, logical, and based on the natural world. The meter was originally defined as one ten-millionth of the distance from the equator to the North Pole. Because it relies entirely on base-10 mathematics, converting between units (like millimeters to kilometers) requires simply moving a decimal point. Today, it is the official system for 95% of the global population."}</p>
-          <h3 className="text-xl font-bold mb-3 mt-8 text-slate-800">{dict?.unit_app?.article_title3 || "The Imperial and Avoirdupois Systems"}</h3>
-          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.unit_app?.article_p3 || "The British Imperial and US Customary systems trace their roots back to medieval England, where measurements were based on physical artifacts, agriculture, and the human body. An inch was three grains of barley placed end-to-end, and a foot was exactly that—the length of a human foot."}</p>
-          <p className="text-slate-600 leading-relaxed">{dict?.unit_app?.article_p4 || "When sourcing raw materials globally, precision in these conversions is critical. A manufacturer buying sterling silver or precious metals, for example, must constantly navigate the difference between the standard Avoirdupois ounce (28.34 grams) and the Troy ounce (31.10 grams) used strictly for precious metals. A miscalculation in units can severely impact yield targets and bottom-line profit margins."}</p>
+        <article className="prose prose-slate max-w-none bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mt-12">
+          <h2 className="text-2xl md:text-3xl font-black mb-8 text-slate-800 border-b border-slate-100 pb-4">
+            {dict?.unit_app?.article_title || "Mastering Metric and Imperial Conversions"}
+          </h2>
+
+          <div className="space-y-8">
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.unit_app?.how_to_title || "How to Use the Unit Converter"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.unit_app?.how_to_text || "Select your desired category—such as length, weight, temperature, or volume—then enter the value you wish to convert. The tool instantly calculates the corresponding values across all other major measurement systems, making it perfect for cooking, engineering, or international travel."}
+              </p>
+            </section>
+
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.unit_app?.system_differences_title || "Understanding Measurement Systems"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.unit_app?.system_differences_text || "While most of the world utilizes the metric system (meters, grams, Celsius), a few countries, including the United States, primarily rely on the Imperial system (inches, pounds, Fahrenheit). Having a reliable converter ensures total accuracy when following international recipes or reading global blueprints."}
+              </p>
+            </section>
+
+            <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <h3 className="text-xl font-bold mb-4 text-slate-800 flex items-center gap-2">
+                <span>💡</span> {dict?.unit_app?.faq_title || "Frequently Asked Questions"}
+              </h3>
+              <h4 className="text-lg font-semibold text-slate-700 mb-2">
+                {dict?.unit_app?.faq_q1 || "Are the conversion calculations exact?"}
+              </h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                {dict?.unit_app?.faq_a1 || "Yes. The mathematical formulas used in this tool provide high-precision, standardized calculations. For general usability, the outputs are formatted to avoid excessively long decimal strings, giving you the perfect balance of accuracy and readability."}
+              </p>
+            </section>
+          </div>
         </article>
       </main>
     </div>

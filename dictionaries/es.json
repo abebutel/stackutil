@@ -120,6 +120,14 @@
     "article_title3": "Los Sistemas Imperial y Avoirdupois",
     "article_p3": "Los sistemas imperial británico y estadounidense tienen sus raíces en la Inglaterra medieval.",
     "article_p4": "Al obtener materias primas a nivel mundial, la precisión en estas conversiones es crítica para evitar errores de cálculo costosos.",
+      "article_title": "Dominando las conversiones métricas e imperiales",
+  "how_to_title": "Cómo usar el convertidor de unidades",
+  "how_to_text": "Seleccione la categoría deseada —por ejemplo longitud, peso, temperatura o volumen— y luego ingrese el valor que desea convertir. La herramienta calcula al instante los valores correspondientes en los demás sistemas de medida principales, lo que la hace perfecta para cocinar, ingeniería o viajes internacionales.",
+  "system_differences_title": "Comprender los sistemas de medida",
+  "system_differences_text": "Mientras que la mayor parte del mundo utiliza el sistema métrico (metros, gramos, Celsius), algunos países, incluidos los Estados Unidos, dependen principalmente del sistema imperial (pulgadas, libras, Fahrenheit). Contar con un convertidor fiable garantiza total precisión al seguir recetas internacionales o leer planos globales.",
+  "faq_title": "Preguntas frecuentes",
+  "faq_q1": "¿Los cálculos de conversión son exactos?",
+  "faq_a1": "Sí. Las fórmulas matemáticas empleadas por esta herramienta ofrecen cálculos estandarizados de alta precisión. Para una usabilidad general, las salidas se formatean para evitar cadenas decimales excesivamente largas, ofreciéndole el equilibrio perfecto entre precisión y legibilidad.",
     "categories": {
       "Length": "Longitud", "Weight": "Peso", "Area": "Área", "Volume": "Volumen", "Temperature": "Temperatura"
     },
