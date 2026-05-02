@@ -23,10 +23,10 @@
       "bubble": "Code QR"
     },
     "time": {
-      "title": "Convertisseur de Date et Heure",
-      "desc": "Comparez les fuseaux horaires mondiaux et les levers/couchers de soleil locaux.",
-      "bubble": "Heure"
-    },
+  "title": "Convertisseur de fuseaux horaires",
+  "desc": "Compare les fuseaux horaires mondiaux et les heures locales.",
+  "bubble": "Fuseaux horaires"
+},
     "hebrew": {
       "title": "Convertisseur de Date Hébraïque",
       "desc": "Convertissez entre les dates des calendriers grégorien et hébraïque.",
@@ -103,10 +103,14 @@
     "search": "+ Rechercher une ville...",
     "searching": "Recherche en cours...",
     "empty": "Recherchez et ajoutez une ville pour comparer les fuseaux horaires.",
-    "article_title1": "Maîtriser les fuseaux horaires mondiaux",
-    "article_p1": "Que vous coordonniez une réunion à distance ou planifiiez un voyage, la gestion des décalages horaires peut être un casse-tête logistique.",
-    "article_title2": "Comment un convertisseur d'heure vous synchronise",
-    "article_p2": "Un convertisseur de fuseau horaire fiable élimine les incertitudes liées aux changements d'heure d'été et aux décalages UTC complexes."
+    "article_title": "Naviguer entre les fuseaux horaires mondiaux",
+"how_to_title": "Comment utiliser le convertisseur de fuseaux horaires",
+"how_to_text": "Sélectionnez votre fuseau horaire local et le fuseau horaire de destination que vous souhaitez comparer. Le convertisseur calculera instantanément la différence horaire exacte, ce qui facilite la planification de réunions internationales, l'organisation d'itinéraires de voyage ou la connexion avec la famille à l'étranger.",
+"best_practices_title": "L'importance de l'UTC",
+"best_practices_text": "Le Temps Universel Coordonné (UTC) est la référence principale par laquelle le monde règle les horloges. Comprendre votre décalage par rapport à l'UTC aide à éviter des erreurs de planification lors des changements d'heure d'été dans différents hémisphères.",
+"faq_title": "Questions fréquemment posées",
+"faq_q1": "Cet outil prend-il en compte l'heure d'été (DST) ?",
+"faq_a1": "Oui. Lors du calcul des conversions en temps réel, les algorithmes modernes des fuseaux horaires intègrent automatiquement les changements régionaux d'heure d'été pour garantir que votre réunion ou événement soit programmés avec précision."
   },
   "unit_app": {
     "article_title1": "La fracture mondiale des mesures",

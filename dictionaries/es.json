@@ -23,10 +23,10 @@
       "bubble": "Código QR"
     },
     "time": {
-      "title": "Conversor de Fecha y Hora",
-      "desc": "Compara zonas horarias mundiales y el amanecer/atardecer local.",
-      "bubble": "Hora"
-    },
+  "title": "Convertidor de zonas horarias",
+  "desc": "Compara zonas horarias globales y horas locales.",
+  "bubble": "Zonas horarias"
+},
     "hebrew": {
       "title": "Conversor de Fecha Hebrea",
       "desc": "Convierte entre fechas del calendario gregoriano y hebreo.",
@@ -103,10 +103,14 @@
     "search": "+ Buscar una ciudad...",
     "searching": "Buscando...",
     "empty": "Busca y agrega una ciudad para comparar zonas horarias.",
-    "article_title1": "Dominando las Zonas Horarias Globales",
-    "article_p1": "Ya sea que estés coordinando una reunión remota o planeando un viaje, gestionar las diferencias horarias puede ser un dolor de cabeza logístico.",
-    "article_title2": "Cómo un conversor te mantiene sincronizado",
-    "article_p2": "Un conversor de zona horaria confiable elimina las conjeturas de los cambios de horario de verano y las complejas compensaciones UTC."
+    "article_title": "Navegando por los husos horarios globales",
+"how_to_title": "Cómo usar el convertidor de husos horarios",
+"how_to_text": "Seleccione su huso horario local y el huso horario de destino que desea comparar. El convertidor calculará al instante la diferencia horaria exacta, lo que facilita programar reuniones internacionales, planear itinerarios de viaje o conectarse con familiares en el extranjero.",
+"best_practices_title": "La importancia del UTC",
+"best_practices_text": "El Tiempo Universal Coordinado (UTC) es el estándar principal por el que el mundo regula los relojes. Entender su desfase respecto a UTC ayuda a prevenir errores de programación al lidiar con los cambios de horario de verano en diferentes hemisferios.",
+"faq_title": "Preguntas frecuentes",
+"faq_q1": "¿Esta herramienta tiene en cuenta el horario de verano (DST)?",
+"faq_a1": "Sí. Al calcular conversiones en vivo, los algoritmos modernos de zonas horarias tienen en cuenta automáticamente los cambios regionales de horario de verano para asegurar que su reunión o evento se programe con precisión."
   },
  "unit_app": {
     "article_title1": "La Brecha Global de Medición",

@@ -200,11 +200,42 @@ export default function TimeConverter() {
           </div>
         </div>
 
-        <article className="prose prose-slate max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-          <h2 className="text-2xl font-bold mb-4 text-slate-800">{dict?.time_app?.article_title1 || "Mastering Global Time Zones"}</h2>
-          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.time_app?.article_p1 || "Whether you are coordinating a remote team meeting, scheduling international client calls, or planning a trip abroad, managing time zone differences can be a logistical headache. Miscalculating a time difference can lead to missed deadlines or awkward 3:00 AM phone calls."}</p>
-          <h3 className="text-xl font-bold mb-3 mt-8 text-slate-800">{dict?.time_app?.article_title2 || "How a Time Converter Keeps You Synchronized"}</h3>
-          <p className="mb-4 text-slate-600 leading-relaxed">{dict?.time_app?.article_p2 || "A reliable time zone converter removes the guesswork from daylight saving time shifts and complex UTC offsets. By visualizing multiple cities side-by-side alongside their local sunrise and sunset times, you can easily pinpoint the perfect overlap for global business hours. Always ensure you are checking the date as well as the time—when it's late afternoon in New York, it may already be the next business day in Tokyo or Sydney!"}</p>
+       <article className="prose prose-slate max-w-none bg-white p-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 mt-12">
+          <h2 className="text-2xl md:text-3xl font-black mb-8 text-slate-800 border-b border-slate-100 pb-4">
+            {dict?.time_app?.article_title || "Navigating Global Time Zones"}
+          </h2>
+
+          <div className="space-y-8">
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.time_app?.how_to_title || "How to Use the Time Zone Converter"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.time_app?.how_to_text || "Select your local time zone and the destination time zone you wish to compare. The converter will instantly calculate the exact time difference, making it easy to schedule international meetings, plan travel itineraries, or connect with family abroad."}
+              </p>
+            </section>
+
+            <section>
+              <h3 className="text-xl font-bold mb-3 text-slate-800">
+                {dict?.time_app?.best_practices_title || "The Importance of UTC"}
+              </h3>
+              <p className="text-slate-600 leading-relaxed">
+                {dict?.time_app?.best_practices_text || "Coordinated Universal Time (UTC) is the primary time standard by which the world regulates clocks. Understanding your offset from UTC helps prevent scheduling errors when dealing with daylight saving time changes across different hemispheres."}
+              </p>
+            </section>
+
+            <section className="bg-slate-50 p-6 rounded-xl border border-slate-200">
+              <h3 className="text-xl font-bold mb-4 text-slate-800 flex items-center gap-2">
+                <span>💡</span> {dict?.time_app?.faq_title || "Frequently Asked Questions"}
+              </h3>
+              <h4 className="text-lg font-semibold text-slate-700 mb-2">
+                {dict?.time_app?.faq_q1 || "Does this tool account for Daylight Saving Time (DST)?"}
+              </h4>
+              <p className="text-slate-600 leading-relaxed text-sm">
+                {dict?.time_app?.faq_a1 || "Yes. When calculating live conversions, modern time zone algorithms automatically factor in regional Daylight Saving Time shifts to ensure your meeting or event is scheduled accurately."}
+              </p>
+            </section>
+          </div>
         </article>
       </main>
     </div>

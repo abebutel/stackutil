@@ -23,9 +23,9 @@
       "bubble": "QR Code"
     },
     "time": {
-      "title": "Date & Time Converter",
-      "desc": "Compare global time zones and local sunrise/sunset.",
-      "bubble": "Time"
+      "title": "Time Zone Converter",
+      "desc": "Compare global time zones and local times.",
+      "bubble": "Time Zones"
     },
     "hebrew": {
       "title": "Hebrew Date Converter",
@@ -103,10 +103,14 @@
     "search": "+ Search for a city...",
     "searching": "Searching...",
     "empty": "Search and add a city to compare time zones and daylight hours.",
-    "article_title1": "Mastering Global Time Zones",
-    "article_p1": "Whether you are coordinating a remote team meeting, scheduling international client calls, or planning a trip abroad, managing time zone differences can be a logistical headache. Miscalculating a time difference can lead to missed deadlines or awkward 3:00 AM phone calls.",
-    "article_title2": "How a Time Converter Keeps You Synchronized",
-    "article_p2": "A reliable time zone converter removes the guesswork from daylight saving time shifts and complex UTC offsets. By visualizing multiple cities side-by-side alongside their local sunrise and sunset times, you can easily pinpoint the perfect overlap for global business hours. Always ensure you are checking the date as well as the time—when it's late afternoon in New York, it may already be the next business day in Tokyo or Sydney!"
+    "article_title": "Navigating Global Time Zones",
+    "how_to_title": "How to Use the Time Zone Converter",
+    "how_to_text": "Select your local time zone and the destination time zone you wish to compare. The converter will instantly calculate the exact time difference, making it easy to schedule international meetings, plan travel itineraries, or connect with family abroad.",
+    "best_practices_title": "The Importance of UTC",
+    "best_practices_text": "Coordinated Universal Time (UTC) is the primary time standard by which the world regulates clocks. Understanding your offset from UTC helps prevent scheduling errors when dealing with daylight saving time changes across different hemispheres.",
+    "faq_title": "Frequently Asked Questions",
+    "faq_q1": "Does this tool account for Daylight Saving Time (DST)?",
+    "faq_a1": "Yes. When calculating live conversions, modern time zone algorithms automatically factor in regional Daylight Saving Time shifts to ensure your meeting or event is scheduled accurately."
   },
   "unit_app": {
     "article_title1": "The Global Measurement Divide",
