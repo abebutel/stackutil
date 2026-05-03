@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import LanguageSwitcher from '../../../components/LanguageSwitcher';
-import { getDictionary } from '../../../getDictionary';
+import LanguageSwitcher from '../../components/LanguageSwitcher';
+import { getDictionary } from '../../getDictionary';
 
 export default function PdfUtility() {
   const pathname = usePathname();
