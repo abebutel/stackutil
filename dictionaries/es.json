@@ -46,6 +46,11 @@
       "title": "Conversor de Tallas",
       "desc": "Convierte tallas de zapatos y ropa internacionalmente.",
       "bubble": "Tallas"
+    },
+    "pdf": {
+      "title": "Herramientas PDF",
+      "desc": "Combina, divide o convierte imágenes a PDF de forma segura en tu navegador.",
+      "bubble": "Herramientas PDF"
     }
   },
   "password_app": {
@@ -198,5 +203,19 @@
     "seo_title": "¿Por qué elegir StackUtil?",
     "seo_p1": "En el vertiginoso mundo digital de hoy, encontrar una herramienta de conversión rápida o una calculadora suele significar navegar por un laberinto de ventanas emergentes y sitios hinchados. StackUtil es diferente. Construimos un centro limpio y sin fricciones de herramientas cotidianas que procesan tus datos de forma segura e instantánea.",
     "seo_p2": "Ya seas un desarrollador que necesita una contraseña robusta, un viajero verificando tipos de cambio o un estudiante convirtiendo unidades métricas, nuestras herramientas están diseñadas para funcionar sin problemas en todos tus dispositivos. Como utilizamos procesamiento del lado del cliente en la mayoría de nuestras utilidades, tus datos privados ni siquiera salen de tu pantalla."
+  },
+  "pdf_app": {
+    "title": "Herramientas PDF Seguras",
+    "tab_merge": "Unir PDFs",
+    "tab_split": "Dividir PDF",
+    "tab_image": "Imagen a PDF",
+    "article_title": "El Mejor Conjunto de Herramientas PDF",
+    "how_to_title": "Cómo Unir, Dividir y Convertir",
+    "how_to_text": "Selecciona la herramienta deseada en las pestañas de arriba. Puedes combinar múltiples archivos, extraer páginas específicas o compilar imágenes (JPG/PNG) en un PDF limpio. Todo sucede al instante.",
+    "privacy_title": "Por Qué es Importante el Procesamiento Local",
+    "privacy_text": "La mayoría de los sitios web gratuitos de PDF te obligan a subir tus documentos sensibles a sus servidores. StackUtil es diferente. Modificamos tus archivos directamente en la memoria de tu dispositivo, por lo que nunca se transmiten por internet.",
+    "faq_title": "Preguntas Frecuentes",
+    "faq_q1": "¿Hay un límite en el tamaño del archivo?",
+    "faq_a1": "Como el procesamiento utiliza la memoria local, el límite depende completamente de la memoria RAM de tu computadora o teléfono. La mayoría de los dispositivos modernos pueden manejar fácilmente documentos de cientos de páginas."
   }
 }

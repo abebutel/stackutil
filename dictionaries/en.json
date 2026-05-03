@@ -46,6 +46,11 @@
       "title": "Size Converter",
       "desc": "Convert shoe and clothing sizes internationally.",
       "bubble": "Sizes"
+    },
+    "pdf": {
+      "title": "PDF Utilities",
+      "desc": "Merge, split, or convert images to PDF securely in your browser.",
+      "bubble": "PDF Tools"
     }
   },
   "password_app": {
@@ -191,12 +196,26 @@
     "article_p1": "Buying clothes or shoes from overseas can be frustrating. A size 8 shoe in the US is completely different from a size 8 in the UK, and clothing sizes in Europe and Asia use entirely different baseline measurements.",
     "article_title2": "Why Sizes Vary",
     "article_p2": "Different regions developed their sizing standards independently. US and UK sizes historically rely on inches and the Imperial system, while EU and JP sizes rely on centimeters and the metric system. Always double-check specific brand sizing charts, as 'vanity sizing' can cause variations even within the same country!"
-  }
-  ,"home_seo": {
+  },
+  "home_seo": {
     "hero_subtitle": "Your Comprehensive Digital Toolkit",
     "hero_desc": "StackUtil provides fast, reliable, and free online utilities to streamline your daily tasks. From securing your online presence to calculating complex global time zone differences, everything runs instantly right in your browser.",
     "seo_title": "Why Choose StackUtil?",
     "seo_p1": "In today's fast-paced digital world, finding a quick conversion tool or calculator usually means navigating through a maze of pop-ups and bloated websites. StackUtil is different. We built a clean, friction-free hub of everyday tools that process your data securely and instantly.",
     "seo_p2": "Whether you are a developer needing a strong password, a traveler checking exchange rates, or a student converting metric units, our tools are designed to work seamlessly across all your devices. Because we utilize client-side processing for most of our utilities, your private data never even leaves your screen."
+  },
+   "pdf_app": {
+    "title": "Secure PDF Utilities",
+    "tab_merge": "Merge PDFs",
+    "tab_split": "Split PDF",
+    "tab_image": "Image to PDF",
+    "article_title": "The Ultimate Browser-Based PDF Toolkit",
+    "how_to_title": "How to Merge, Split, and Convert",
+    "how_to_text": "Select your desired tool from the tabs above. You can combine multiple PDF files into a single document, extract specific pages from a large file, or compile images (JPG/PNG) into a clean, presentation-ready PDF. Everything happens instantly.",
+    "privacy_title": "Why Client-Side Processing Matters",
+    "privacy_text": "Most free PDF websites force you to upload your sensitive tax documents, contracts, or personal records to their backend servers. StackUtil is different. We utilize advanced client-side processing, meaning your files are modified directly inside your device's memory and never transmitted across the internet.",
+    "faq_title": "Frequently Asked Questions",
+    "faq_q1": "Is there a limit to the file size I can process?",
+    "faq_a1": "Because the processing utilizes your device's local memory, the file size limit depends entirely on your computer or mobile phone's RAM. Most modern devices can easily handle documents spanning hundreds of pages without any lag."
   }
 }

@@ -36,7 +36,7 @@ export default function Home() {
     return <div className="min-h-screen bg-slate-50"></div>;
   }
 
-  // All 8 Tools properly sequenced
+  // All 9 Tools properly sequenced
   const toolsList = [
     {
       title: dict?.tools?.unit?.title || "Unit Converter",
@@ -109,6 +109,15 @@ export default function Home() {
       color: "from-green-400 to-emerald-600",
       bubbleLabel: dict?.tools?.qr?.bubble || "QR Code",
       bubbleIcon: "📱"
+    },
+    {
+      title: dict?.tools?.pdf?.title || "PDF Utilities",
+      desc: dict?.tools?.pdf?.desc || "Merge, split, or convert images to PDF securely in your browser.",
+      icon: "📄",
+      link: `/${lang}/pdf-utility`,
+      color: "from-red-500 to-rose-600",
+      bubbleLabel: dict?.tools?.pdf?.bubble || "PDF Tools",
+      bubbleIcon: "📄"
     }
   ];
 
