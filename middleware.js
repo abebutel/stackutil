@@ -21,6 +21,6 @@ export function middleware(request) {
 export const config = {
   matcher: [
     // Skip Next.js internal files, images, and API routes
-    '/((?!_next|api|favicon.ico|opengraph-image.png|ads.txt).*)',
+    '/((?!_next|api|favicon.ico|opengraph-image.png|ads.txt|sitemap.xml).*)',
   ],
 };
