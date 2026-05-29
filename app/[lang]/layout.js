@@ -5,26 +5,11 @@ import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function generateMetadata({ params }) {
-  const resolvedParams = await params;
-  const lang = resolvedParams.lang || 'en';
-
-  return {
-    metadataBase: new URL('https://stackutil.com'),
-    title: "StackUtil | Your go to FREE online tools hub",
-    description: "Your go to FREE online tools hub",
-    alternates: {
-      canonical: `/${lang}`,
-      languages: {
-        'en': '/en',
-        'es': '/es',
-        'fr': '/fr',
-        'he': '/he',
-        'x-default': '/en',
-      },
-    },
-  };
-}
+export const metadata = {
+  metadataBase: new URL('https://stackutil.com'),
+  title: "StackUtil | Your go to FREE online tools hub",
+  description: "Your go to FREE online tools hub",
+};
 
 export default async function RootLayout({ children, params }) {
   const resolvedParams = await params;
